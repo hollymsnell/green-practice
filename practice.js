@@ -67,7 +67,7 @@ console.log("Primary colors include " + col1 + ", " + col2 + ", and " + col3 + "
 
 // # 5. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string interpolation (the #{} operator).
 
-var col1 = "yellow";
-var col2 = "red";
-var col3 = "blue";
+var colo1 = "yellow";
+var colo2 = "red";
+var colo3 = "blue";
 console.log(`Primary colors include ${col1}, ${col2}, and ${col3}.`);
