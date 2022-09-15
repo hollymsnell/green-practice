@@ -1,36 +1,70 @@
 #ruby practice.rb ***
 
-# 1. Write a program that asks the user to enter a word, then prints that word with all capital letters.
+# 1. Write a while loop to print the numbers 1 through 10.
 
-# puts "Enter a word:"
-# word = gets.chomp
-# p word.upcase 
+number = 1
+while number <= 10
+  p number
+  number = number + 1
+end
 
-# 2. Write a program that asks the user to enter a number, then prints "That's a big number" if the number is greater than 100.
+# 2. Write a while loop that prints the word "hello" 5 times.
 
-# puts "Enter a number:"
-# number = gets.chomp
-# if number.to_i > 100
-#   p "That's a big number"
-# end
+# p "hello " * 5
 
-# 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
+count = 0
+while count < 5
+  p "hello"
+  count = count + 1
+end
 
-# puts "Enter two numbers:"
-# num1 = gets.chomp
-# num2 = gets.chomp
-# p num1.to_i + num2.to_i
+# 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
 
-# 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
+while true
+  puts "Enter a word: "
+  input = gets.chomp
+  if input == "stop"
+    break
+  end
+end 
 
-# puts "Enter a word:"
-# word = gets.chomp
-# p word.reverse
+# 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
 
-# 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
+number = 0
+while number <= 100
+  p number
+  number = number + 5
+end
 
-# puts "Enter a word"
-# word = gets.chomp
-# if word.length > 5
-#   p "That's a long word"
-# end
+
+# 5. Write a while loop that prints the number 9000 ten times.
+
+count = 0
+while count < 10
+  p 9000
+  count = count + 1
+end
+
+# 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
+
+while true
+  puts "Enter a number: "
+input = gets.chomp
+if input.to_i > 10
+  break
+end
+end 
+
+# 7. Write a while loop that prints the numbers 50 to 70.
+
+number = 50
+while number <= 70
+  p number
+  number = number + 1
+end
+
+# 8. Write a while loop that prints the phrase "Around the world" 144 times.
+
+# 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
+
+# 10. Write a while loop that prints the even numbers from 2 to 40.
