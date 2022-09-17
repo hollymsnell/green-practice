@@ -1,90 +1,75 @@
 #ruby practice.rb ***
 
-# 1. Write a while loop to print the numbers 1 through 10.
 
-number = 1
-while number <= 10
-  p number
-  number = number + 1
+# 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
+
+array = ["winter", "spring", "summer"]
+array << "fall"
+array << "seasons"
+p array
+
+# 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
+
+letters = ["h", "o", "l", "l"]
+letters[1] = "e"
+p letters
+
+# 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
+
+numbers = [5, 4, 3, 2, 1]
+index = 0
+while index < numbers.length
+  p numbers[index]
+  index = index + 1
 end
 
-# 2. Write a while loop that prints the word "hello" 5 times.
+# 4. Create an array to store 1 number. Then add three more numbers to the array and print the array on one line.
 
-# p "hello " * 5
+numbers = [5]
+numbers << 6
+numbers << 10
+numbers << 8000
+p numbers
 
-count = 0
-while count < 5
-  p "hello"
-  count = count + 1
+
+# 5. Create an array to store 3 strings with lower case letters. Then change the third string to have all capital letters and print the array on one line.
+
+strings = ["i'm gonna scream", "you're a freak", "jolly good day innit"]
+strings[2] = strings[2].upcase
+p strings
+
+# 6. Create an array to store 3 names. Then print out each name on separate lines with a while loop.
+
+names = ["holly", "james", "terilyn"]
+index = 0
+while index < names.length
+  p names[index]
+  index = index + 1
 end
 
-# 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
+# 7. Create an array to store 2 strings. Then add one string to the array and print the array on one line.
 
-while true
-  puts "Enter a word: "
-  input = gets.chomp
-  if input == "stop"
-    break
-  end
-end 
+array = ["can i have", "some of your"]
+array << "applesauce"
+p array
 
-# 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
+# 8. Create an array to store 5 numbers. Then change the first number to 10 times its original value and print the array on one line.
 
-number = 0
-while number <= 100
-  p number
-  number = number + 5
+numbers = [5, 7, 9, 3, 1]
+numbers[0] = numbers[0] * 10
+p numbers
+
+# 9. Create an array to store 2 numbers. Then print out each number on separate lines with a while loop.
+
+numbers = [456456, 567]
+index = 0
+while index < numbers.length
+  p numbers[index]
+  index = index + 1
 end
 
+# 10. Create an array to store names of 3 different countries. Then add one more country and print the array one line.
 
-# 5. Write a while loop that prints the number 9000 ten times.
-
-count = 0
-while count < 10
-  p 9000
-  count = count + 1
-end
-
-# 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
-
-while true
-  puts "Enter a number: "
-input = gets.chomp
-if input.to_i > 10
-  break
-end
-end 
-
-# 7. Write a while loop that prints the numbers 50 to 70.
-
-number = 50
-while number <= 70
-  p number
-  number = number + 1
-end
-
-# 8. Write a while loop that prints the phrase "Around the world" 144 times.
-
-count = 0
-while count < 144
-  puts "Around the World"
-  count = count + 1
-end
-
-# 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
-
-while true
-  puts "Enter a word: "
-  input = gets.chomp
-  if input.length > 5
-    break
-  end
-end
-
-# 10. Write a while loop that prints the even numbers from 2 to 40.
-
-number = 2
-while number <= 40
-  p number
-  number = number + 2
-end
+countries = ["USA", "Canada", "Guam"]
+countries << "Australia"
+p countries
