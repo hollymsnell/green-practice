@@ -1,77 +1,52 @@
 #ruby practice.rb ***
 
 
-# 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
+# 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
 
-person = {"first_name" => "Jill", "last_name" => "Bean", "email" => "happy@test.com"}
-p person["first_name"]
-p person["last_name"]
-p person["email"]
+def get_double(number)
+  return number * 2
+end
 
-# 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
+p get_double(9)
 
-people = [
-  {"first_name" => "Jill", "last_name" => "Bean", "email" => "happy@test.com"},
-  {"first_name" => "Harry", "last_name" => "Stein", "email" => "friendly@test.com"},
-  {"first_name" => "Abel", "last_name" => "Rodriguez", "email" => "joyful@test.com"}
-]
-p people[0]
+# 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
 
-# 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
+def make_upcase(string)
+  return string.upcase
+end
 
-menu = {"spaghetti" => 14, "wine" => 12, "oysters" => 24}
-menu["rigatoni"] = 13
-p menu
+p make_upcase("joe momma")
 
-# 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
+# 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
 
-book = {"title" => "1984", "author" => "George Orwell", "pages" => 100, "language" => "english"}
-p book["title"]
-p book["author"]
-p book["pages"]
-p book["language"]
+def get_difference(number1, number2)
+  return number1 - number2
+end
 
-# 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
+p get_difference(4 , 1)
 
-books = [
-  {"title" => "1984", "author" => "George Orwell", "pages" => 100, "language" => "english"},
-  {"title" => "second book", "author" => "doodle bop", "pages" => 101, "language" => "english"},
-  {"title" => "Adventures of Boo", "author" => "Holly Snell", "pages" => 1800, "language" => "english"}
-]
+# 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
 
-p books[2]["author"]
+def num_squared(number)
+  return number * number
+end
 
-# 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
+p num_squared(5)
 
-capitals = {"colorado" => "denver", "kansas" => "topeka", "texas" => "austin"}
-capitals["idaho"] = "boise"
-p capitals
+# 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
 
-# 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
+def first_letter(string)
+  return string[0]
+end
 
-laptop = {"brand" => "apple", "model" => "air", "year" => 2022}
-p laptop["brand"]
-p laptop["model"]
-p laptop["year"]
+p first_letter("question")
 
-# 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
+# 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
-laptops = [
-  {"brand" => "apple", "model" => "air", "year" => 2022},
-  {"brand" => "sony", "model" => "silly", "year" => 2022},
-  {"brand" => "toshiba", "model" => "tushy", "year" => 2022}
-]
-p laptops[1]["model"] 
+# 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
 
-# 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
+# 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
 
-definition = {"concur" => "to agree with", "high-five" => "to slap hands with another as a form of celebration or unity"}
-definition["cat"] = "one of the wildest domesticated land animals"
-p definition
+# 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
 
-# 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
-
-shirt = {"brand" => "vans", "color" => "yellow", "size" => "small"}
-p shirt["brand"]
-p shirt["color"]
-p shirt["size"]
+# 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
