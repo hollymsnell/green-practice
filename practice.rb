@@ -43,10 +43,40 @@ p first_letter("question")
 
 # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
+def combine_string(string1, string2, string3)
+  return "#{string1} #{string2} #{string3}"
+end
+
+p combine_string("how", "the heck", "are ya?")
+
 # 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+
+def num_to_string(number)
+  return number.to_s
+end
+
+p num_to_string(6)
 
 # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
 
+def five_string(string)
+  return string * 5
+end
+
+p five_string("howdy")
+
 # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
 
+def average(num1, num2, num3)
+  return (num1 + num2 + num3) / 3.0
+end
+
+p average(3, 7, 2)
+
 # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+
+def math_time(number)
+  return (number * 10) + 30
+end
+
+p math_time(4)
