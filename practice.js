@@ -41,10 +41,40 @@ console.log(firstLetter("knife"));
 
 // # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
+function combineStrings(string1, string2, string3) {
+  return `${string1} ${string2} ${string3}`;
+}
+
+console.log(combineStrings("happy", "freakin'", "birthday!"));
+
 // # 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+
+function numToString(number) {
+  return number.toString();
+}
+
+console.log(numToString(6));
 
 // # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
 
+function repeatString(string) {
+  return string + string + string + string + string;
+}
+
+console.log(repeatString("aint"));
+
 // # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
 
+function average(num1, num2, num3) {
+  return (num1 + num2 + num3) / 3;
+}
+
+console.log(average(6, 8, 10));
+
 // # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+
+function mathTime(number) {
+  return number * 10 + 30;
+}
+
+console.log(mathTime(18));
