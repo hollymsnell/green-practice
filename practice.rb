@@ -1,82 +1,134 @@
 #ruby practice.rb ***
 
 
-# 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
+#  1. Start with an array of numbers and create a new array with each number times 3.
+#     For example, [1, 2, 3] becomes [3, 6, 9].
 
-def get_double(number)
-  return number * 2
+numbers = [1, 2, 3]
+new_numbers = []
+index = 0
+while index < numbers.length
+  new_numbers << numbers[index] * 3
+  index = index + 1
 end
+p new_numbers
 
-p get_double(9)
+#  2. Start with an array of strings and create a new array with each string upcased.
+#     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-# 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
 
-def make_upcase(string)
-  return string.upcase
+strings = ["hello", "goodbye"]
+new_strings = []
+index = 0
+while index < strings.length
+  new_strings << strings[index].upcase
+  index = index + 1
 end
+p new_strings
 
-p make_upcase("joe momma")
 
-# 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
+#  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
+#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
-def get_difference(number1, number2)
-  return number1 - number2
+hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
+new_array = []
+index = 0
+while index < hashes.length
+new_array << hashes[index][:name]
+index = index + 1
 end
+p new_array
 
-p get_difference(4 , 1)
 
-# 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
+#  4. Start with an array of numbers and create a new array with each number plus 7.
+#     For example, [1, 2, 3] becomes [8, 9, 10].
 
-def num_squared(number)
-  return number * number
+array = [1, 2, 3]
+new_array = []
+index = 0
+while index < array.length
+  new_array << array[index] + 7
+  index = index + 1
 end
+p new_array
 
-p num_squared(5)
 
-# 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
+#  5. Start with an array of strings and create a new array with each string's length.
+#     For example, ["hello", "goodbye"] becomes [5, 7].
 
-def first_letter(string)
-  return string[0]
+array = ["hello", "goodbye"]
+new_array = []
+index = 0 
+while index < array.length
+  new_array << array[index].length
+  index = index + 1
 end
+p new_array
 
-p first_letter("question")
 
-# 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
+#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
-def combine_string(string1, string2, string3)
-  return "#{string1} #{string2} #{string3}"
+hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
+new_array = []
+index = 0
+while index < hashes.length
+  new_array << hashes[index][:age]
+  index = index + 1
 end
+p new_array
 
-p combine_string("how", "the heck", "are ya?")
 
-# 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+#  7. Start with an array of numbers and create a new array with each number divided by 2.
+#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
-def num_to_string(number)
-  return number.to_s
+
+numbers = [1, 2, 3]
+divided = []
+index = 0 
+while index < numbers.length
+  divided << numbers[index] / 2.0
+  index = index + 1
 end
+p divided
 
-p num_to_string(6)
 
-# 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
+#  8. Start with an array of strings and create a new array with each string's first letter only.
+#     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
-def five_string(string)
-  return string * 5
+strings = ["hello", "goodbye"]
+first_letter = []
+index = 0 
+while index < strings.length
+  first_letter << strings[index][0]
+  index = index + 1
 end
+p first_letter
 
-p five_string("howdy")
 
-# 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
+# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
-def average(num1, num2, num3)
-  return (num1 + num2 + num3) / 3.0
+
+hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
+new_array = []
+index = 0 
+while index < hashes.length
+  new_array << hashes[index][:age] * 2
+  index = index + 1
 end
+p new_array
 
-p average(3, 7, 2)
 
-# 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+# 10. Start with an array of numbers and create a new array with each number converted into a string.
+#     For example, [1, 2, 3] becomes ["1", "2", "3"].
 
-def math_time(number)
-  return (number * 10) + 30
+
+numbers = [1, 2, 3]
+strings = []
+index = 0
+while index < numbers.length
+  strings << numbers[index].to_s
+  index = index + 1
 end
-
-p math_time(4)
+p strings
