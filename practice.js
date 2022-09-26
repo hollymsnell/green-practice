@@ -46,20 +46,89 @@ console.log(names);
 // #  4. Start with an array of numbers and create a new array with each number plus 7.
 // #     For example, [1, 2, 3] becomes [8, 9, 10].
 
+var numbers = [1, 2, 3];
+var plusSeven = [];
+var index = 0;
+while (index < numbers.length) {
+  plusSeven.push(numbers[index] + 7);
+  index++;
+}
+console.log(plusSeven);
+
 // #  5. Start with an array of strings and create a new array with each string's length.
 // #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+var greetings = ["howdy", "farewell"];
+var count = [];
+var index = 0;
+while (index < greetings.length) {
+  count.push(greetings[index].length);
+  index++;
+}
+console.log(count);
 
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+var people = [
+  { name: "Alice", age: 27 },
+  { name: "Blane", age: 16 },
+];
+var ages = [];
+var index = 0;
+while (index < people.length) {
+  ages.push(people[index].age);
+  index++;
+}
+console.log(ages);
+
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+var digits = [4, 8, 2, 5];
+var halved = [];
+var index = 0;
+while (index < digits.length) {
+  halved.push(digits[index] / 2.0);
+  index++;
+}
+console.log(halved);
 
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+var states = ["colorado", "arizona", "north dakota"];
+var mainLetter = [];
+var index = 0;
+while (index < states.length) {
+  mainLetter.push(states[index][0]);
+  index++;
+}
+console.log(mainLetter);
+
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+var person = [
+  { name: "Alice", age: 27 },
+  { name: "Blane", age: 16 },
+];
+var ageDoubled = [];
+index = 0;
+while (index < person.length) {
+  ageDoubled.push(person[index].age * 2);
+  index++;
+}
+console.log(ageDoubled);
+
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+var numerics = [5, 8, 12];
+var words = [];
+index = 0;
+while (index < numerics.length) {
+  words.push(numerics[index].toString());
+  index++;
+}
+console.log(words);
