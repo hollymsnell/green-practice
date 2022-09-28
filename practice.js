@@ -191,14 +191,55 @@ console.log(letters);
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+var peoples = [
+  { name: "Sampson", age: 36 },
+  { name: "Delilah", age: 26 },
+];
+var edades = [];
+peoples.forEach(function (person) {
+  edades.push(person.age);
+});
+console.log(edades);
+
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+var nummies = [5, 12, 345];
+var halfsies = [];
+nummies.forEach(function (nums) {
+  halfsies.push(nums / 2.0);
+});
+console.log(halfsies);
 
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+var foods = ["chips", "kale", "cheese"];
+var alphabet = [];
+foods.forEach(function (food) {
+  alphabet.push(food[0]);
+});
+console.log(alphabet);
+
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+var characters = [
+  { name: "Sampson", age: 36 },
+  { name: "Delilah", age: 26 },
+];
+var doubleAge = [];
+characters.forEach(function (character) {
+  doubleAge.push(character.age * 2);
+});
+console.log(doubleAge);
+
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+var salaries = [56, 109, 76];
+var written = [];
+salaries.forEach(function (salary) {
+  written.push(salary.toString());
+});
+console.log(written);
