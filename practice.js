@@ -297,14 +297,50 @@ console.log(wordDistance);
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+var youngsters = [
+  { name: "Sampson", age: 36 },
+  { name: "Delilah", age: 26 },
+];
+var youthNumber = youngsters.map(function (youngster) {
+  return youngster.age;
+});
+console.log(youthNumber);
+
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+var numeros = [6, 8000, 7];
+var halfIt = numeros.map(function (numero) {
+  return numero / 2.0;
+});
+console.log(halfIt);
 
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+var fruits = ["banana", "pear", "kiwi"];
+var first = fruits.map(function (fruit) {
+  return fruit[0];
+});
+console.log(first);
+
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+var oldies = [
+  { name: "Sampson", age: 36 },
+  { name: "Delilah", age: 26 },
+];
+var oldAge = oldies.map(function (oldy) {
+  return oldy.age * 2;
+});
+console.log(oldAge);
+
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+var bers = [7, 567, 9, 0];
+var stngs = bers.map(function (ber) {
+  return ber.toString();
+});
+console.log(stngs);
