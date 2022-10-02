@@ -82,14 +82,73 @@ p shorter
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
+array = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] 
+short_name = []
+index = 0 
+while index < array.length
+  if array[index][:name].length < 6
+    short_name << array[index]
+  end
+  index = index + 1
+end
+p short_name
+
+
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+
+numbers = [8, 23, 0, 44, 1980, 3]
+below_ten = []
+index = 0
+while index < numbers.length
+  if numbers[index] < 10
+    below_ten << numbers[index]
+  end
+  index = index + 1
+end
+p below_ten
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+strings = ["big", "little", "good", "bad"]
+no_bee = []
+index = 0
+while index < strings.length
+  if strings[index][0] != "b"
+  no_bee << strings[index]
+  end
+  index = index + 1
+end
+p no_bee
+
+
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] 
+cheaper = []
+index = 0
+while index < items.length
+  if items[index][:price] < 10
+    cheaper << items[index]
+  end
+  index = index + 1
+end
+p cheaper
+
+
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+
+numbers = [2, 4, 5, 1, 8, 9, 7]
+odds = []
+index = 0
+while index < numbers.length
+  if numbers[index] % 2 == 1
+    odds << numbers[index]
+  end
+  index = index + 1
+end
+p odds
