@@ -3,349 +3,93 @@
 
 ###with while loops
 
-#  1. Start with an array of numbers and create a new array with each number times 3.
-#     For example, [1, 2, 3] becomes [3, 6, 9].
+#  1. Start with an array of numbers and create a new array with only the numbers less than 20.
+#     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-numbers = [1, 2, 3]
+numbers = [2, 32, 80, 18, 12, 3]
 new_numbers = []
 index = 0
 while index < numbers.length
-  new_numbers << numbers[index] * 3
+  if numbers[index] < 20
+    new_numbers << numbers[index]
+  end
   index = index + 1
 end
 p new_numbers
 
-#  2. Start with an array of strings and create a new array with each string upcased.
-#     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+#  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
+#     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
 
-strings = ["hello", "goodbye"]
-new_strings = []
+strings = ["winner", "winner", "chicken", "dinner"]
+wwords = []
 index = 0
 while index < strings.length
-  new_strings << strings[index].upcase
+  if strings[index][0] == "w"
+    wwords << strings[index]
+  end
   index = index + 1
 end
-p new_strings
+p wwords
 
 
-#  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+#  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = []
-index = 0
-while index < hashes.length
-new_array << hashes[index][:name]
-index = index + 1
-end
-p new_array
-
-
-#  4. Start with an array of numbers and create a new array with each number plus 7.
-#     For example, [1, 2, 3] becomes [8, 9, 10].
-
-array = [1, 2, 3]
-new_array = []
+array = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+pricey = []
 index = 0
 while index < array.length
-  new_array << array[index] + 7
+  if array[index][:price] > 5
+    pricey<< array[index] 
+  end
   index = index + 1
 end
-p new_array
+p pricey
 
 
-#  5. Start with an array of strings and create a new array with each string's length.
-#     For example, ["hello", "goodbye"] becomes [5, 7].
+#  4. Start with an array of numbers and create a new array with only the even numbers.
+#     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-array = ["hello", "goodbye"]
-new_array = []
-index = 0 
-while index < array.length
-  new_array << array[index].length
-  index = index + 1
-end
-p new_array
-
-
-#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = []
+numbers = [2, 4, 5, 1, 8, 9, 7]
+evens = []
 index = 0
-while index < hashes.length
-  new_array << hashes[index][:age]
-  index = index + 1
-end
-p new_array
-
-
-#  7. Start with an array of numbers and create a new array with each number divided by 2.
-#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-
-
-numbers = [1, 2, 3]
-divided = []
-index = 0 
 while index < numbers.length
-  divided << numbers[index] / 2.0
+  if numbers[index] % 2 == 0
+    evens << numbers[index]
+  end
   index = index + 1
 end
-p divided
+p evens
 
 
-#  8. Start with an array of strings and create a new array with each string's first letter only.
-#     For example, ["hello", "goodbye"] becomes ["h", "g"].
+#  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
+#     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-strings = ["hello", "goodbye"]
-first_letter = []
-index = 0 
+strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
+shorter = []
+index = 0
 while index < strings.length
-  first_letter << strings[index][0]
+  if strings[index].length < 4
+    shorter << strings[index]
+  end
   index = index + 1
 end
-p first_letter
+p shorter
 
 
-# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+#  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
+#  7. Start with an array of numbers and create a new array with only the numbers less than 10.
+#     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = []
-index = 0 
-while index < hashes.length
-  new_array << hashes[index][:age] * 2
-  index = index + 1
-end
-p new_array
+#  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
+#     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+#  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
-# 10. Start with an array of numbers and create a new array with each number converted into a string.
-#     For example, [1, 2, 3] becomes ["1", "2", "3"].
-
-
-numbers = [1, 2, 3]
-strings = []
-index = 0
-while index < numbers.length
-  strings << numbers[index].to_s
-  index = index + 1
-end
-p strings
-
-
-###with .each shortcut
-
-
-#  1. Start with an array of numbers and create a new array with each number times 3.
-#     For example, [1, 2, 3] becomes [3, 6, 9].
-
-numbers = [1, 2, 3]
-new_numbers = []
-numbers.each do |number|
-  new_numbers << number * 3
-end
-p new_numbers
-
-
-#  2. Start with an array of strings and create a new array with each string upcased.
-#     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
-
-strings = ["hello", "goodbye"]
-new_array = []
-strings.each do |string|
-  new_array << string.upcase
-end
-p new_array
-
-
-#  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
-
-hashes =  [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = []
-hashes.each do |hash|
-  new_array << hash[:name]
-end
-p new_array
-
-
-#  4. Start with an array of numbers and create a new array with each number plus 7.
-#     For example, [1, 2, 3] becomes [8, 9, 10].
-
-numbers = [1, 2, 3]
-new_array = []
-numbers.each do |number|
-  new_array << number + 7
-end
-p new_array
-
-
-#  5. Start with an array of strings and create a new array with each string's length.
-#     For example, ["hello", "goodbye"] becomes [5, 7].
-
-strings = ["hello", "goodbye"]
-lengths = []
-strings.each do |string|
-  lengths << string.length
-end
-p lengths
-
-
-#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-
-hashes =  [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = []
-hashes.each do |hash|
-  new_array << hash[:age]
-end
-p new_array
-
-
-
-#  7. Start with an array of numbers and create a new array with each number divided by 2.
-#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-
-numbers = [1, 2, 3]
-divided = []
-numbers.each do |number|
-  divided << number / 2.0
-end
-p divided
-
-
-#  8. Start with an array of strings and create a new array with each string's first letter only.
-#     For example, ["hello", "goodbye"] becomes ["h", "g"].
-
-strings = ["hello", "goodbye"]
-first_letters = []
-strings.each do |string|
-  first_letters << string[0]
-end
-p first_letters
-
-
-# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
-
-hashes =  [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-ages_doubled = []
-hashes.each do |hash|
-  ages_doubled << hash[:age] * 2
-end
-p ages_doubled
-
-
-# 10. Start with an array of numbers and create a new array with each number converted into a string.
-#     For example, [1, 2, 3] becomes ["1", "2", "3"].
-
-numbers = [1, 2, 3]
-strings = []
-numbers.each do |number|
-  strings << number.to_s
-end
-p strings
-
-
-###.map shortcut
-
-#  1. Start with an array of numbers and create a new array with each number times 3.
-#     For example, [1, 2, 3] becomes [3, 6, 9].
-
-numbers = [1, 2, 3]
-new_numbers = numbers.map do |number|
-  number * 3
-end
-p new_numbers
-
-
-#  2. Start with an array of strings and create a new array with each string upcased.
-#     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
-
-strings = ["hello", "goodbye"]
-new_strings = strings.map do |string|
-  string.upcase
-end
-p new_strings
-
-
-#  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
-
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = hashes.map do |hash|
-  hash[:name]
-end
-p new_array
-
-
-#  4. Start with an array of numbers and create a new array with each number plus 7.
-#     For example, [1, 2, 3] becomes [8, 9, 10].
-
-numbers = [1, 2, 3]
-new_numbers = numbers.map do |number|
-  number + 7
-end
-p new_numbers
-
-#  5. Start with an array of strings and create a new array with each string's length.
-#     For example, ["hello", "goodbye"] becomes [5, 7].
-
-strings = ["hello", "goodbye"]
-new_strings = strings.map do |string|
-  string.length
-end
-p new_strings
-
-
-#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-new_array = hashes.map do |hash|
-  hash[:age]
-end
-p new_array
-
-
-#  7. Start with an array of numbers and create a new array with each number divided by 2.
-#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-
-numbers = [1, 2, 3]
-divided = numbers.map do |number|
-  number / 2.0
-end
-p divided
-
-
-#  8. Start with an array of strings and create a new array with each string's first letter only.
-#     For example, ["hello", "goodbye"] becomes ["h", "g"].
-
-strings = ["hello", "goodbye"]
-first_letter = strings.map do |string|
-  string[0]
-end
-p first_letter
-
-
-# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
-
-hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
-ages_doubled = hashes.map do |hash|
-  hash[:age] * 2
-end
-p ages_doubled
-
-
-# 10. Start with an array of numbers and create a new array with each number converted into a string.
-#     For example, [1, 2, 3] becomes ["1", "2", "3"].
-
-numbers = [1, 2, 3]
-numtostring = numbers.map do |number|
-  number.to_s
-end
-p numtostring
+# 10. Start with an array of numbers and create a new array with only the odd numbers.
+#     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
