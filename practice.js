@@ -225,14 +225,67 @@ console.log(short);
 // #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
+var hashes = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var shortNames = [];
+hashes.forEach(function (hash) {
+  if (hash.name.length < 6) {
+    shortNames.push(hash);
+  }
+});
+console.log(shortNames);
+
 // #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 // #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+
+numbers = [8, 23, 0, 44, 1980, 3];
+var singleDigit = [];
+numbers.forEach(function (number) {
+  if (number < 10) {
+    singleDigit.push(number);
+  }
+});
+console.log(singleDigit);
 
 // #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 // #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+strings = ["big", "little", "good", "bad"];
+var noB = [];
+strings.forEach(function (string) {
+  if (string[0] != "b") {
+    noB.push(string);
+  }
+});
+console.log(noB);
+
 // #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+hashes = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var lowPrice = [];
+hashes.forEach(function (hash) {
+  if (hash.price < 10) {
+    lowPrice.push(hash);
+  }
+});
+console.log(lowPrice);
+
 // # 10. Start with an array of numbers and create a new array with only the odd numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+numbers = [2, 4, 5, 1, 8, 9, 7];
+var oddies = [];
+numbers.forEach(function (number) {
+  if (number % 2 === 1) {
+    oddies.push(number);
+  }
+});
+console.log(oddies);
