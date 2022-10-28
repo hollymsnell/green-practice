@@ -143,3 +143,76 @@ while (index < numbers.length) {
   index = index + 1;
 }
 console.log(biggestBoy);
+
+//***forEach
+
+// #  1. Start with an array of numbers and compute the sum of all the numbers.
+// #     For example, [5, 10, 8, 3] becomes 26.
+
+var nums = [5, 10, 8, 3];
+var add = 0;
+nums.forEach(function (num) {
+  add = add + num;
+});
+console.log(add);
+
+// #  2. Start with an array of strings and combine them all into a single string.
+// #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+
+var fruits = ["banana", "apple", "kiwi"];
+var smoothie = "";
+fruits.forEach(function (fruit) {
+  smoothie = smoothie + fruit;
+});
+console.log(smoothie);
+
+// #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
+
+var supplies = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var total = 0;
+supplies.forEach(function (supply) {
+  total = total + supply.price;
+});
+console.log(total);
+
+// #  4. Start with an array of numbers and compute the the minumum number.
+// #     For example, [5, 10, 8, 3, 9] becomes 3.
+
+var ages = [5, 10, 8, 3, 9];
+var youngest = ages[0];
+ages.forEach(function (age) {
+  if (age < youngest) {
+    youngest = age;
+  }
+});
+console.log(youngest);
+
+// #  5. Start with an array of strings and compute the total length of all the strings.
+// #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+
+var pets = ["cat", "dog", "lizard"];
+var characters = 0;
+pets.forEach(function (pet) {
+  characters = characters + pet.length;
+});
+console.log(characters);
+
+// #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+
+// #  7. Start with an array of numbers and compute product of all the numbers.
+// #     For example, [5, 10, 8, 3] becomes 1200.
+
+// #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+// #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+// #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+
+// # 10. Start with an array of numbers and compute the maximum number.
+// #     For example, [5, 10, 8, 3] becomes 10.
