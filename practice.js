@@ -205,14 +205,63 @@ console.log(characters);
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
+items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var cheapestItem = items[0];
+items.forEach(function (item) {
+  if (item.price < cheapestItem.price) {
+    cheapestItem = item;
+  }
+});
+console.log(cheapestItem);
+
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
+
+var levels = [5, 10, 8, 3];
+var points = 1;
+levels.forEach(function (level) {
+  points = points * level;
+});
+console.log(points);
 
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
+var words = ["volleyball", "basketball", "badminton"];
+var together = "-";
+words.forEach(function (word) {
+  together = together + word + "-";
+});
+console.log(together);
+
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
+var things = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var smol = things[0];
+things.forEach(function (thing) {
+  if (thing.name.length < smol.name.length) {
+    smol = thing;
+  }
+});
+console.log(smol);
+
 // # 10. Start with an array of numbers and compute the maximum number.
 // #     For example, [5, 10, 8, 3] becomes 10.
+
+numbers = [5, 10, 8, 3];
+var max = numbers[0];
+numbers.forEach(function (num) {
+  if (num > max) {
+    max = num;
+  }
+});
+console.log(max);
