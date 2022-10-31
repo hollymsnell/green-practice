@@ -280,14 +280,46 @@ console.log(sum);
 // #  2. Start with an array of strings and combine them all into a single string.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
+var deportes = ["volleyball", "basketball", "badminton"];
+var longBoi = deportes.reduce(function (longBoi, deporte) {
+  return longBoi + deporte;
+});
+console.log(longBoi);
+
 // #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
+
+var cosas = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var cuesta = cosas.reduce(function (cuesta, cosas) {
+  return cuesta + cosas.price;
+}, 0);
+console.log(cuesta);
 
 // #  4. Start with an array of numbers and compute the the minumum number.
 // #     For example, [5, 10, 8, 3, 9] becomes 3.
 
+var numeros = [5, 10, 8, 3, 9];
+var smallBoi = numeros.reduce(function (smallBoi, numeros) {
+  if (numeros < smallBoi) {
+    return numeros;
+  } else {
+    return smallBoi;
+  }
+}, numeros[0]);
+console.log(smallBoi);
+
 // #  5. Start with an array of strings and compute the total length of all the strings.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+
+var names = ["bob", "steven", "bethany", "quinn"];
+var nameLength = names.reduce(function (nameLength, names) {
+  return nameLength + names.length;
+}, 0);
+console.log(nameLength);
 
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
