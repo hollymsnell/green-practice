@@ -324,14 +324,64 @@ console.log(nameLength);
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
+items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var cheapBoi = items.reduce(function (cheapBoi, item) {
+  if (cheapBoi.price < item.price) {
+    return cheapBoi;
+  } else {
+    return item;
+  }
+});
+console.log(cheapBoi);
+
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
+
+var worths = [5, 10, 8, 3];
+product = worths.reduce(function (product, worth) {
+  return product * worth;
+}, 1);
+console.log(product);
 
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
+var dishes = ["plate", "bowl", "spoon"];
+var dashed = dishes.reduce(function (dashed, dish) {
+  return dashed + dish + "-";
+}, "-");
+console.log(dashed);
+
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
+var objects = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var shortGuy = objects.reduce((shortGuy, object) => {
+  if (shortGuy.name < object.name) {
+    return shortGuy;
+  } else {
+    return object;
+  }
+});
+console.log(shortGuy);
+
 // # 10. Start with an array of numbers and compute the maximum number.
 // #     For example, [5, 10, 8, 3] becomes 10.
+
+var integers = [5, 10, 8, 3];
+var maximus = integers.reduce((maximus, integer) => {
+  if (maximus > integer) {
+    return maximus;
+  } else {
+    return integer;
+  }
+});
+console.log(maximus);
