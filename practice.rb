@@ -69,14 +69,72 @@ p people_array
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
+strings = ["to", "be", "or", "not", "to", "be"]
+number = {}
+index = 0
+while index < strings.length
+  word = strings[index]
+  if number[word] == nil
+    number[word] = 0
+  end
+  number[word] += 1
+  index += 1
+end
+p number
+
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
+
+hash =  {"a" => 1, "b" => 2, "c" => 3, "d" => 4}
+flat_array = []
+hash.each do |key, value|
+  flat_array << key
+  flat_array << value
+end
+p flat_array
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
 
+price_hash = {"chair" => 75, "book" => 15}
+items = [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}]
+combined_hash = {}
+index = 0
+while index < items.length
+  item = items[index]
+  name = item[:name]
+  color = item[:color]
+  weight = item[:weight]
+  price = price_hash[name]
+  combined_hash[name] = {price: price, color: color, weight: weight }
+  index = index + 1
+end
+p combined_hash
+
 #  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 #     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
 
+books = [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}]
+books_hash = {}
+index = 0
+while index < books.length
+  book = books[index]
+  author = book[:author]
+  title = book[:title]
+  if books_hash[author] == nil
+    books_hash[author] = []
+  end
+  books_hash[author] << title
+  index = index + 1
+end
+p books_hash
+
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+
+hash = {"a" => 1, "b" => 2, "c" => 3}
+new_hash = {}
+hash.each do |key, value|
+  new_hash[value] = key
+end
+p new_hash
