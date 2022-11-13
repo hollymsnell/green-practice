@@ -159,5 +159,37 @@ p largest_sum
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
+numbers = [2, 5, 3, 1, 0, 7, 11]
+result = false
+index = 0
+while index < numbers.length
+  current_number = numbers[index]
+  index2 = 0
+  while index2 < numbers.length
+    if index != index2
+      other_number = numbers[index2]
+      if current_number + other_number == 10 && result == false
+        result = [current_number, other_number]
+      end
+    end
+    index2 = index2 + 1
+  end
+  index = index + 1
+end
+p result
+
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+many_strings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
+one_string = ""
+index = 0 
+while index < many_strings.length
+  index2 = 0
+  while index2 < many_strings[index].length
+    one_string = one_string + many_strings[index][index2]
+    index2 += 1
+  end
+  index += 1
+end
+p one_string
