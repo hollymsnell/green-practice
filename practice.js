@@ -83,8 +83,41 @@ console.log(maxProduct);
 // #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 // #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
+numbers = [
+  [1, 3],
+  [8, 9],
+  [2, 16],
+];
+var allSum = 0;
+index = 0;
+while (index < numbers.length) {
+  var number = numbers[index];
+  index2 = 0;
+  while (index2 < number.length) {
+    var num = number[index2];
+    allSum = allSum + num;
+    index2 = index2 + 1;
+  }
+  index = index + 1;
+}
+console.log(allSum);
+
 // #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 // #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+
+var numbers1 = [1, 2];
+var numbers2 = [6, 7, 8];
+var numberSums = [];
+index = 0;
+while (index < numbers1.length) {
+  index2 = 0;
+  while (index2 < numbers2.length) {
+    numberSums.push(numbers1[index] + numbers2[index2]);
+    index2 += 1;
+  }
+  index += 1;
+}
+console.log(numberSums);
 
 // #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 // #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
