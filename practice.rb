@@ -40,11 +40,46 @@ p all_letters
 #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
 
-
+letters = ["a", "b", "c", "d"]
+combos = []
+index = 0
+while index < letters.length
+  index2 = 0
+  while index2 < letters.length
+    if index != index2
+      combos << letters[index] + letters[index2]
+    end
+      index2 = index2 + 1
+    end
+    index = index + 1
+  end
+  p combos
 
 
 #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
+
+numbers = [5, -2, 1, -9, -7, 2, 6]
+max_product = numbers[0] * numbers[1]
+index = 0
+while index < numbers.length
+  current_number = numbers[index]
+  index2 = 0
+  while index2 < numbers.length
+    if index != index2
+      other_number = numbers[index2]
+      product = current_number * other_number
+      if product > max_product
+        max_product = product
+      end
+    end
+    index2 = index2 + 1
+  end
+  index = index + 1
+end
+p max_product
+
+
 
 #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
