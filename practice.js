@@ -161,5 +161,37 @@ console.log(maxSum);
 // #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 // #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
+var numeros = [2, 5, 3, 1, 0, 7, 11];
+var result = false;
+index = 0;
+while (index < numeros.length) {
+  currentNumber = numeros[index];
+  index2 = 0;
+  while (index2 < numeros.length) {
+    if (index !== index2) {
+      otherNumber = numeros[index2];
+      if (currentNumber + otherNumber == 10 && result === false) {
+        result = [currentNumber, otherNumber];
+      }
+    }
+    index2++;
+  }
+  index++;
+}
+console.log(result);
+
 // # 10. Use a nested loop to convert an array of string arrays into a single string.
 // #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+var wordGroups = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]];
+var allWords = "";
+index = 0;
+while (index < wordGroups.length) {
+  index2 = 0;
+  while (index2 < wordGroups[index].length) {
+    allWords = allWords + wordGroups[index][index2];
+    index2++;
+  }
+  index++;
+}
+console.log(allWords);
