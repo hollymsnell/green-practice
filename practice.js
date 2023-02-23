@@ -1,197 +1,108 @@
 //node practice.js ***
 
-// #  1. Use a nested loop to convert an array of number pairs into a single flattened array.
-// #     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
+// # 1. Use a variable to store a number, then write a condition that prints 0 if the number is equal to 10, and prints -1 otherwise.
 
-var buddies = [
-  [1, 3],
-  [8, 9],
-  [2, 16],
-];
-var family = [];
-var index = 0;
-while (index < buddies.length) {
-  var buddy = buddies[index];
-  var index2 = 0;
-  while (index2 < buddy.length) {
-    var bud = buddy[index2];
-    family.push(bud);
-    index2 = index2 + 1;
-  }
-  index = index + 1;
+var number = 34;
+if (number === 10) {
+  console.log(0);
+} else {
+  console.log(-1);
 }
-console.log(family);
 
-// #  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
-// #     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
+// # 2. Use a variable to store a number, then write a condition that prints -1 if the number is less than 10, prints 1 if the number is greater than 10, and prints 0 if the number is equal to 10.
 
-var letters1 = ["a", "b", "c"];
-var letters2 = ["d", "e", "f", "g"];
-var allLetters = [];
-index = 0;
-while (index < letters1.length) {
-  index2 = 0;
-  while (index2 < letters2.length) {
-    allLetters.push(letters1[index] + letters2[index2]);
-    index2 += 1;
-  }
-  index += 1;
+var grade = 56;
+if (grade < 10) {
+  console.log(-1);
+} else if (grade > 10) {
+  console.log(1);
+} else {
+  console.log(0);
 }
-console.log(allLetters);
 
-// #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
-// #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+// # 3. Use variables to store two numbers, then write a condition that prints 1 if the numbers are both less than 10, and prints 0 otherwise.
 
-var letters = ["a", "b", "c", "d"];
-var pairs = [];
-index = 0;
-while (index < letters.length) {
-  index2 = 0;
-  while (index2 < letters.length) {
-    if (index !== index2) {
-      pairs.push(letters[index] + letters[index2]);
-    }
-    index2 += 1;
-  }
-  index += 1;
+var num1 = 5;
+var num2 = 23;
+if (num1 && num2 < 10) {
+  console.log(1);
+} else {
+  console.log(0);
 }
-console.log(pairs);
 
-// #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
-// #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
+// # 4. Use a variable to store a number, then write a condition that prints 1 if the number is over 9000, and prints -1 otherwise.
 
-var numbers = [5, -2, 1, -9, -7, 2, 6];
-var maxProduct = numbers[0] * numbers[1];
-index = 0;
-while (index < numbers.length) {
-  var currentNumber = numbers[index];
-  index2 = 0;
-  while (index2 < numbers.length) {
-    if (index !== index2) {
-      var otherNumber = numbers[index2];
-      var product = currentNumber * otherNumber;
-      if (product > maxProduct) {
-        maxProduct = product;
-      }
-    }
-    index2 += 1;
-  }
-  index = index + 1;
+var lucky = 9;
+if (lucky > 9000) {
+  console.log(1);
+} else {
+  console.log(-1);
 }
-console.log(maxProduct);
 
-// #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
-// #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
+// # 5. Use a variable to store a number, then write a condition that prints 9 if the number is less than 10, prints 19 if the number is less than 20, prints 29 if the number is less than 30, and prints -1 otherwise (only one print statement should occur).
 
-numbers = [
-  [1, 3],
-  [8, 9],
-  [2, 16],
-];
-var allSum = 0;
-index = 0;
-while (index < numbers.length) {
-  var number = numbers[index];
-  index2 = 0;
-  while (index2 < number.length) {
-    var num = number[index2];
-    allSum = allSum + num;
-    index2 = index2 + 1;
-  }
-  index = index + 1;
+var nums = 69;
+if (nums < 10) {
+  console.log(9);
+} else if (nums < 20) {
+  console.log(19);
+} else if (nums < 30) {
+  console.log(29);
+} else {
+  console.log(-1);
 }
-console.log(allSum);
 
-// #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
-// #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+// # 6. Use variables to store two numbers, then write a condition that prints 100 if either number is greater than 10, and prints -100 otherwise.
 
-var numbers1 = [1, 2];
-var numbers2 = [6, 7, 8];
-var numberSums = [];
-index = 0;
-while (index < numbers1.length) {
-  index2 = 0;
-  while (index2 < numbers2.length) {
-    numberSums.push(numbers1[index] + numbers2[index2]);
-    index2 += 1;
-  }
-  index += 1;
+var number1 = 6;
+var number2 = 19;
+if (number1 || number2 > 10) {
+  console.log(100);
+} else {
+  console.log(-100);
 }
-console.log(numberSums);
 
-// #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
-// #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
+// # 7. Use a variable to store a number, then write a condition that prints 1776 if the number is less than 0, and prints 1979 otherwise.
 
-numbers = [2, 8, 3];
-var products = [];
-index = 0;
-while (index < numbers.length) {
-  var firstNumber = numbers[index];
-  index2 = 0;
-  while (index2 < numbers.length) {
-    var secondNumber = numbers[index2];
-    products.push(firstNumber * secondNumber);
-    index2++;
-  }
-  index++;
+var numbers = -2;
+if (numbers < 0) {
+  console.log(1776);
+} else {
+  console.log(1979);
 }
-console.log(products);
 
-// #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
-// #     For example, [1, 8, 3, 10] becomes 18.
+// # 8. Use a variable to store a number, then write a condition that prints 100 if the number equals 100, prints 99 if the number is equal to 99, and prints 0 otherwise.
 
-var values = [1, 8, 3, 10];
-var maxSum = values[0] + values[1];
-index = 0;
-while (index < values.length) {
-  index2 = 0;
-  while (index2 < values.length) {
-    if (index !== index2) {
-      var sum = values[index] + values[index2];
-      if (sum > maxSum) {
-        maxSum = sum;
-      }
-    }
-    index2++;
-  }
-  index++;
+var numero = 67;
+if (numero === 100) {
+  console.log(100);
+} else if (numero === 99) {
+  console.log(99);
+} else {
+  console.log(0);
 }
-console.log(maxSum);
 
-// #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
-// #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+// # 9. Use variables to store two numbers, then write a condition that prints 1 if the first number is less than zero and the second number is greater than 0, and prints 0 otherwise.
 
-var numeros = [2, 5, 3, 1, 0, 7, 11];
-var result = false;
-index = 0;
-while (index < numeros.length) {
-  currentNumber = numeros[index];
-  index2 = 0;
-  while (index2 < numeros.length) {
-    if (index !== index2) {
-      otherNumber = numeros[index2];
-      if (currentNumber + otherNumber == 10 && result === false) {
-        result = [currentNumber, otherNumber];
-      }
-    }
-    index2++;
-  }
-  index++;
+var numero1 = -56;
+var numero2 = 3;
+if (numero1 < 0 && numero2 > 0) {
+  console.log(1);
+} else {
+  console.log(0);
 }
-console.log(result);
 
-// # 10. Use a nested loop to convert an array of string arrays into a single string.
-// #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+// # 10. Use a variable to store a number, then write a condition that prints 5 if the number is greater than 80, prints 4 if the number is greater than 60, prints 3 if the number is greater than 40, prints 2 if the number is greater than 20, and prints 1 otherwise (only one print statement should occur).
 
-var wordGroups = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]];
-var allWords = "";
-index = 0;
-while (index < wordGroups.length) {
-  index2 = 0;
-  while (index2 < wordGroups[index].length) {
-    allWords = allWords + wordGroups[index][index2];
-    index2++;
-  }
-  index++;
+var rate = 6;
+if (rate > 80) {
+  console.log(5);
+} else if (rate > 60) {
+  console.log(4);
+} else if (rate > 40) {
+  console.log(3);
+} else if (rate > 20) {
+  console.log(2);
+} else {
+  console.log(1);
 }
-console.log(allWords);
