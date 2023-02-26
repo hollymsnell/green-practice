@@ -1,111 +1,76 @@
 #ruby practice.rb ***
 
-# 1. Use a variable to store a number, then write a condition that prints 0 if the number is equal to 10, and prints -1 otherwise.
+# 1. Write a program that uses variables to store a first and last name, then prints the full name in one line using string concatenation (the + operator).
 
-number = 10
-if number == 10
-  p 0
+first = "holly"
+last = "snell"
+p first + " " + last
+
+# 2. Write a program that uses variables to store a first and last name, then prints the full name in one line using string interpolation (the #{} operator).
+
+first = "holly"
+last = "snell"
+p "#{first} #{last}" 
+
+# 3. Write a program that asks the user to input a word. If the word is "marco", print "polo".
+
+p "enter a word"
+word = gets.chomp 
+if word == "marco"
+  p "polo"
 else
-  p -1
+  p "wahts upppp" 
 end
 
-# 2. Use a variable to store a number, then write a condition that prints -1 if the number is less than 10, prints 1 if the number is greater than 10, and prints 0 if the number is equal to 10.
+# 4. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string concatenation (the + operator).
 
-number = 10
-if number < 10
-  p -1
-elsif number > 10
-  p 1
-else
-  p 0
-end
+color1 = "yellow"
+color2 = "red"
+color3 = "blue"
+p "The primary colors are " + color1 + ", " + color2 + ", and " + color3 + "."
 
-# 3. Use variables to store two numbers, then write a condition that prints 1 if the numbers are both less than 10, and prints 0 otherwise.
+# 5. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string interpolation (the #{} operator).
 
-num1 = 6
-num2 = 3
-if num1 && num2 < 10
-  p 1
-else
-  p 0
-end
+color1 = "yellow"
+color2 = "red"
+color3 = "blue"
+p "The colors for mixing are #{color1}, #{color2}, and #{color3}."
 
-# 4. Use a variable to store a number, then write a condition that prints 1 if the number is over 9000, and prints -1 otherwise.
+# 6. Write a program that asks the user to enter a name. If the name is not "Santa", print "You're not Santa."
 
-number = 4
-if number > 9000
-  p 1
-else
-  p -1
-end
-
-# 5. Use a variable to store a number, then write a condition that prints 9 if the number is less than 10, prints 19 if the number is less than 20, prints 29 if the number is less than 30, and prints -1 otherwise (only one print statement should occur).
-
-number = 9
-if number < 10
-  p 9
-elsif number < 20
-  p 19
-elsif number < 30
-  p 29
-else
-  p -1
-end
-
-# 6. Use variables to store two numbers, then write a condition that prints 100 if either number is greater than 10, and prints -100 otherwise.
-
-num1 = 4
-num2 = 70
-if num1 || num2 > 10
-  p 100
-else
-  p -100
-end
-
-# 7. Use a variable to store a number, then write a condition that prints 1776 if the number is less than 0, and prints 1979 otherwise.
-
-number = 78
-if number < 0
-  p 1776
+p "Enter a name, please."
+name = gets.chomp
+if name != "Santa" 
+  p "You're not Santa."
 else 
-  p 1979
+  p "welcome back Santa."
 end
 
-# 8. Use a variable to store a number, then write a condition that prints 100 if the number equals 100, prints 99 if the number is equal to 99, and prints 0 otherwise.
+# 7. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator).
 
-number = 31
-if number == 100
-  p 100
-elsif number == 99
-  p 99
+title = "Hamlet"
+author = "W.Shakespeare"
+p "The author of the well known book " + title + " is " + author + "." 
+
+# 8. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string interpolation (the #{} operator).
+
+title = "Hamlet"
+author = "W.Shakespeare"
+p "I don't even care about #{author} or his dumbass writings such as #{title}."
+
+# 9. Write a program that asks the user to enter a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
+
+p "Please enter your password."
+password = gets.chomp
+if password == "Joshua"
+  p "shall we play a game?"
 else 
-  p 0
+  p "access denied, homie."
 end
 
+# 10. Write a program that uses variables to store the names of three cities, then prints out a sentence using that information with string concatenation (the + operator).
 
-# 9. Use variables to store two numbers, then write a condition that prints 1 if the first number is less than zero and the second number is greater than 0, and prints 0 otherwise.
-
-num1 = -1
-num2 = 89
-if num1 < 0 && num2 > 0
-  p 1
-else 
-  p 0
-end
-
-# 10. Use a variable to store a number, then write a condition that prints 5 if the number is greater than 80, prints 4 if the number is greater than 60, prints 3 if the number is greater than 40, prints 2 if the number is greater than 20, and prints 1 otherwise (only one print statement should occur).
-
-number = 65
-if number > 80
-  p 5
-elsif number > 60
-  p 4
-elsif number > 40 
-  p 3
-elsif number > 20
-  p 2
-else 
-  p 1
-end
-
-
+city1 = "Dallas"
+city2 = "Denver"
+city3 = "Detroit"
+p "Three D cities could include " + city1 + ", " + city2 + " , and " + city3 + "."
