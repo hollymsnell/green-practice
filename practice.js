@@ -1,26 +1,84 @@
-//node practice.js ***
+// //node practice.js ***
 
-<script src="https://gist.github.com/peterxjang/d30d686d6dbe194dbb89465849b6926f.js"></script>;
+// # 1. Write a while loop to print the numbers 1 through 10.
 
-// # 1. Write a program that asks the user to enter a word, then prints that word with all capital letters.
+var number = 1;
+while (number <= 10) {
+  console.log(number);
+  number = number + 1;
+}
 
-var word = window.prompt("Enter a word: ");
-console.log(word.toUpperCase());
+// # 2. Write a while loop that prints the word "hello" 5 times.
 
-// # 2. Write a program that asks the user to enter a number, then prints "That's a big number" if the number is greater than 100.
+var count = 0;
+while (count < 5) {
+  console.log("hello");
+  count = count + 1;
+}
 
-// # 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
+// # 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
 
-// # 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
+// while (true) {
+//   var input = window.prompt("Enter a word: ");
+//   if (input === "stop") {
+//     break;
+//   }
+// }
 
-// # 5. Write a program that asks the user to enter a number, then prints the number times 10.
+// # 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
 
-// # 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
+var value = 0;
+while (value <= 100) {
+  console.log(value);
+  value = value + 5;
+}
 
-// # 7. Write a program that asks the user to enter a word, then prints the number of letters in the word.
+// # 5. Write a while loop that prints the number 9000 ten times.
 
-// # 8. Write a program that asks the user to enter a number, then prints "That's a negative number" if the number is less than 0.
+var count = 0;
+while (count < 10) {
+  console.log(9000);
+  count = count + 1;
+}
 
-// # 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
+// # 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
 
-// # 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
+// while (true) {
+//   var input = window.prompt("Enter a number: ");
+//   if (parseInt(input) > 10) {
+//     break;
+//   }
+// }
+
+// # 7. Write a while loop that prints the numbers 50 to 70.
+
+var number = 50;
+while (number <= 70) {
+  console.log(number);
+  number = number + 1;
+}
+
+// # 8. Write a while loop that prints the phrase "Around the world" 144 times.
+
+var count = 0;
+while (count < 144) {
+  console.log("Around the World");
+  count = count + 1;
+}
+
+// # 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
+
+// while (true) {
+//   var input = window.prompt("Enter a word: ");
+//   if (input.length > 5) {
+//     break;
+//   }
+// }
+
+// # 10. Write a while loop that prints the even numbers from 2 to 40.
+
+var number = 2;
+while (number <= 40) {
+  console.log(number);
+  number = number + 2;
+}
