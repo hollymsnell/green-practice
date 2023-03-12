@@ -1,72 +1,21 @@
 //node practice.js ***
 
-// # 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
+// # 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
 
-var words = ["salutations", "greetings", "hello"];
-words.push("howdy");
-words.push("sup");
-console.log(words);
+// # 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
 
-// # 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
+// # 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
 
-var letters = ["g", "u", "r", "l"];
-letters[1] = 39;
-console.log(letters);
+// # 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
 
-// # 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
+// # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
 
-var numbers = [6, 9, 12, 456, 3];
-var index = 0;
-while (index < numbers.length) {
-  console.log(numbers[index]);
-  index = index + 1;
-}
+// # 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
 
-// # 4. Create an array to store 1 number. Then add three more numbers to the array and print the array on one line.
+// # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
 
-var digits = [2];
-digits.push(5);
-digits.push(9);
-console.log(digits);
+// # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
 
-// # 5. Create an array to store 3 strings with lower case letters. Then change the third string to have all capital letters and print the array on one line.
+// # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
 
-var strings = ["party hard", "let's get a party goin'", "fight that fight"];
-strings[2] = strings[2].toUpperCase();
-console.log(strings);
-
-// # 6. Create an array to store 3 names. Then print out each name on separate lines with a while loop.
-
-var names = ["Bill", "Bob", "Jan"];
-index = 0;
-while (index < names.length) {
-  console.log(names[index]);
-  index = index + 1;
-}
-
-// # 7. Create an array to store 2 strings. Then add one string to the array and print the array on one line.
-
-var movies = ["Mouse Hunt", "Saving Private Ryan"];
-movies.push("Matilda");
-console.log(movies);
-
-// # 8. Create an array to store 5 numbers. Then change the first number to 10 times its original value and print the array on one line.
-
-var integers = [13, 9, 600, 23, 2000];
-integers[0] = integers[0] * 10;
-console.log(integers);
-
-// # 9. Create an array to store 2 numbers. Then print out each number on separate lines with a while loop.
-
-var rank = [1, 2];
-index = 0;
-while (index < rank.length) {
-  console.log(rank[index]);
-  index = index + 1;
-}
-
-// # 10. Create an array to store names of 3 different countries. Then add one more country and print the array one line.
-
-var countries = ["Argentina", "Chile", "Ireland"];
-countries.push("Scotland");
-console.log(countries);
+// # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.

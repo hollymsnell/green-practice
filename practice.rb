@@ -1,73 +1,77 @@
 #ruby practice.rb ***
 
-# 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
+# 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
 
-array = ["hey", "hello", "greetings"]
-array << "sup"
-array << "howdy"
-p array
+person = {"first_name" => "Holly", "last_name" => "Snell", "age" => 31}
+p person["first_name"]
+p person["last_name"]
+p person["age"]
 
-# 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
+# 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
 
-letters = ["a", "b", "c", "d"]
-letters[1] = "turkey"
-p letters
+homies = [
+  {"first_name" => "Kayla", "last_name" => "Sampson"},
+  {"first_name" => "Millie", "last_name" => "Preston"},
+  {"first_name" => "Annie", "last_name" => "Young"}
+]
+p homies[0]["first_name"]
 
-# 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
+# 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
 
-numbers = [1, 45, 6, 7, 8]
-index = 0
-while index < numbers.length
-  p numbers[index]
-  index = index + 1
-end
+food = {"rice" => 5, "corn" => 7, "potato" => 2}
+food["millet"] = 5
+p food
 
-# 4. Create an array to store 1 number. Then add three more numbers to the array and print the array on one line.
+# 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
 
-number = [8]
-number << 89
-number << 123
-p number
+book = {"title" => "Liver Rescue", "author" => "Anthony William", "page_count" => 456, "language" => "English"}
+p book["title"]
+p book["author"]
+p book["page_count"]
+p book["language"]
 
-# 5. Create an array to store 3 strings with lower case letters. Then change the third string to have all capital letters and print the array on one line.
+# 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
 
-words = ["jack", "jill", "bye"]
-words[2] = words[2].upcase
-p words
+books = [
+  {"title" => "Liver Rescue", "author" => "Anthony William"},
+  {"title" => "The Cure for the Common Life", "author" => "Max Lucado"},
+  {"title" => "The Bible", "author" => "A bunch of people"}
+]
+p books[2]["author"]
 
-# 6. Create an array to store 3 names. Then print out each name on separate lines with a while loop.
+# 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
 
-names = ["holly", "rico", "dan"]
-index = 0
-while index < names.length
-  p names[index]
-  index = index + 1
-end
+states = {"Colorado" => "Denver", "Kansas" => "Topeka", "Nevada" => "Reno"}
+states["Texas"] = "Austin"
+p states
 
-# 7. Create an array to store 2 strings. Then add one string to the array and print the array on one line.
 
-lyrics = ["i've been living fast", "feelin really bad"]
-lyrics << "it's okay cuz i'm rich, psych i'm still sad as a bitch"
-p lyrics
+# 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
 
-# 8. Create an array to store 5 numbers. Then change the first number to 10 times its original value and print the array on one line.
+laptop = {"brand" => "some brand", "model" => "some model", "year" => 1985}
+p laptop["brand"]
+p laptop["model"]
+p laptop["year"]
 
-digits = [7 ,8, 23, 56, 1]
-digits[0] = digits[0] * 10
-p digits
+# 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
 
-# 9. Create an array to store 2 numbers. Then print out each number on separate lines with a while loop.
+laptop = [
+  {"brand" => "some brand1", "model" => "some model1", "year" => 1985},
+  {"brand" => "some brand2", "model" => "some model2", "year" => 1986},
+  {"brand" => "some brand3", "model" => "some model3", "year" => 1987}
+]
+p laptop[1]["model"]
 
-numbers = [456, 9000]
-index = 0
-while index < numbers.length
-  p numbers[index]
-  index = index + 1
-end
+# 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
 
-# 10. Create an array to store names of 3 different countries. Then add one more country and print the array one line.
+definition = {"alone" => "without anyone around", "growth" => "to increase in size or moral character"}
+definition["slow"] = "to move at a decreased pace"
+p definition
 
-countries = ["China", "USA", "Mexico"]
-countries << "Cuba"
-p countries
+# 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+
+shirt = {"brand" => "Hanes", "color" => "grey", "size" => "small"}
+p shirt["brand"]
+p shirt["color"]
+p shirt["size"]
 
