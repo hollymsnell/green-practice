@@ -1,75 +1,21 @@
 //node practice.js ***
 
-// # 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
+// # 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
 
-var person = { firstName: "Holly", lastName: "Snell", age: 31 };
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.age);
+// # 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
 
-// # 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
+// # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
 
-var homies = [
-  { firstName: "Kayla", lastName: "Sampson" },
-  { firstName: "Millie", lastName: "Preston" },
-  { firstName: "Annie", lastName: "Young" },
-];
-console.log(homies[0].firstName);
+// # 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
 
-// # 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
+// # 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
 
-var menu = { cookie: 5, donut: 7, scone: 2 };
-menu["cake"] = 4;
-console.log(menu);
+// # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
-// # 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
+// # 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
 
-var book = { title: "Liver Rescue", author: "Anthony Williams", pages: 456, language: "English" };
-console.log(book.title);
-console.log(book.author);
-console.log(book.pages);
-console.log(book.language);
+// # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
 
-// # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
+// # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
 
-var books = [
-  { title: "Liver Rescue", author: "Anthony William" },
-  { title: "The Cure for the Common Life", author: "Max Lucado" },
-  { title: "The Bible", author: "A bunch of people" },
-];
-console.log(books[2].author);
-
-// # 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
-
-var states = { Colorado: "Denver", Kansas: "Topeka", Nevada: "Reno" };
-states.Texas = "Austin";
-console.log(states);
-
-// # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
-
-var laptop = { brand: "some brand", model: "some model", year: 1985 };
-console.log(laptop.brand);
-console.log(laptop.model);
-console.log(laptop.year);
-
-// # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
-
-laptop = [
-  { brand: "some brand1", model: "some model1", year: 1985 },
-  { brand: "some brand2", model: "some model2", year: 1986 },
-  { brand: "some brand3", model: "some model3", year: 1987 },
-];
-console.log(laptop[1].model);
-
-// # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
-
-var definition = { alone: "without anyone around", growth: "to increase in size or moral character" };
-definition.slow = "to move at a decreased pace";
-console.log(definition);
-
-// # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
-
-var shirt = { brand: "Hanes", color: "yellow", size: "medium" };
-console.log(shirt.brand);
-console.log(shirt.color);
-console.log(shirt.size);
+// # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
