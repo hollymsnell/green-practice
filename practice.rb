@@ -132,58 +132,166 @@
 
 
 ###.each###
+# #  1. Start with an array of numbers and create a new array with each number times 3.
+# #     For example, [1, 2, 3] becomes [3, 6, 9].
+
+# numbers = [1, 2, 3, 4]
+# new_numbers = []
+# numbers.each do |number|
+#   new_numbers << number * 3
+# end
+# p new_numbers
+
+# #  2. Start with an array of strings and create a new array with each string upcased.
+# #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+# strings = ["joy", "pain", "sunshine", "rain"]
+# upcased = []
+# strings.each do |string|
+#   upcased << string.upcase
+# end
+# p upcased
+
+# #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
+# #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+# people = [
+#   {name: "Holly", age: 31}, 
+#   {name:"Jenny", age: 23}
+# ]
+# names = []
+# people.each do |person|
+#   names << person[:name]
+# end
+# p names
+
+# #  4. Start with an array of numbers and create a new array with each number plus 7.
+# #     For example, [1, 2, 3] becomes [8, 9, 10].
+
+# numbers = [7, 6, 23]
+# added = []
+# numbers.each do |number|
+#   added << number + 7
+# end
+# p added
+
+# #  5. Start with an array of strings and create a new array with each string's length.
+# #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+# strings = ["call", "me", "maybe"]
+# lengths = []
+# strings.each do |string|
+#   lengths << string.length
+# end
+# p lengths
+
+# #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+# #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+
+# people = [
+#   {name: "Holly", age: 31}, 
+#   {name:"Jenny", age: 23}
+# ]
+# ages = []
+# people.each do |person|
+#   ages << person[:age]
+# end
+# p ages
+
+# #  7. Start with an array of numbers and create a new array with each number divided by 2.
+# #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+# numbers = [20, 100, 1000]
+# halved = []
+# numbers.each do |number|
+#   halved << number / 2
+# end
+# p halved
+
+# #  8. Start with an array of strings and create a new array with each string's first letter only.
+# #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+# strings = ["i", "love", "coding"]
+# letter = []
+# strings.each do |string|
+#   letter << string[0]
+# end
+# p letter
+
+# # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+# #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+# people = [
+#   {name: "Holly", age: 31}, 
+#   {name:"Jenny", age: 23}
+# ]
+# older = []
+# people.each do |person|
+#   older << person[:age] * 2
+# end
+# p older
+
+# # 10. Start with an array of numbers and create a new array with each number converted into a string.
+# #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+# numbers = [4, 67, 1000]
+# strings = []
+# numbers.each do |number|
+#   strings << number.to_s
+# end
+# p strings
+
+
+###.map###
+
 #  1. Start with an array of numbers and create a new array with each number times 3.
 #     For example, [1, 2, 3] becomes [3, 6, 9].
 
-numbers = [1, 2, 3, 4]
-new_numbers = []
-numbers.each do |number|
-  new_numbers << number * 3
+numbers = [6, 7, 9]
+new_numbers = numbers.map do |number|
+  number * 3
 end
-p new_numbers
+  p new_numbers
+
 
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-strings = ["joy", "pain", "sunshine", "rain"]
-upcased = []
-strings.each do |string|
-  upcased << string.upcase
+strings = ["hey", "bye"]
+new_strings = strings.map do |string|
+  string.upcase
 end
-p upcased
+p new_strings
 
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
 people = [
-  {name: "Holly", age: 31}, 
-  {name:"Jenny", age: 23}
-]
-names = []
-people.each do |person|
-  names << person[:name]
-end
-p names
+     {name: "Holly", age: 31}, 
+     {name:"Jenny", age: 23}
+   ]
+   names = people.map do |person|
+    person[:name]
+   end
+   p names
 
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
-numbers = [7, 6, 23]
-added = []
-numbers.each do |number|
-  added << number + 7
+numbers = [45, 7, 1]
+added = numbers.map do |number|
+  number + 7
 end
 p added
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
 
-strings = ["call", "me", "maybe"]
-lengths = []
-strings.each do |string|
-  lengths << string.length
+strings = ["hi", "farewell"]
+number = strings.map do |string|
+  string.length
 end
-p lengths
+p number
 
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
@@ -192,29 +300,26 @@ people = [
   {name: "Holly", age: 31}, 
   {name:"Jenny", age: 23}
 ]
-ages = []
-people.each do |person|
-  ages << person[:age]
+age = people.map do |person|
+  person[:age]
 end
-p ages
+p age
 
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
-numbers = [20, 100, 1000]
-halved = []
-numbers.each do |number|
-  halved << number / 2
+numbers = [5, 45, 90]
+divided = numbers.map do |number|
+  number / 2
 end
-p halved
+p divided
 
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
-strings = ["i", "love", "coding"]
-letter = []
-strings.each do |string|
-  letter << string[0]
+strings = ["winter", "summer"]
+letter = strings.map do |string|
+  string[0]
 end
 p letter
 
@@ -225,51 +330,16 @@ people = [
   {name: "Holly", age: 31}, 
   {name:"Jenny", age: 23}
 ]
-older = []
-people.each do |person|
-  older << person[:age] * 2
+older = people.map do |person|
+  person[:age] * 2
 end
 p older
 
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
 
-numbers = [4, 67, 1000]
-strings = []
-numbers.each do |number|
-  strings << number.to_s
+numbers = [45, 56, 2]
+strings = numbers.map do |number|
+  number.to_s
 end
 p strings
-
-
-###.map###
-
-#  1. Start with an array of numbers and create a new array with each number times 3.
-#     For example, [1, 2, 3] becomes [3, 6, 9].
-
-#  2. Start with an array of strings and create a new array with each string upcased.
-#     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
-
-#  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
-
-#  4. Start with an array of numbers and create a new array with each number plus 7.
-#     For example, [1, 2, 3] becomes [8, 9, 10].
-
-#  5. Start with an array of strings and create a new array with each string's length.
-#     For example, ["hello", "goodbye"] becomes [5, 7].
-
-#  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-
-#  7. Start with an array of numbers and create a new array with each number divided by 2.
-#     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-
-#  8. Start with an array of strings and create a new array with each string's first letter only.
-#     For example, ["hello", "goodbye"] becomes ["h", "g"].
-
-# 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-#     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
-
-# 10. Start with an array of numbers and create a new array with each number converted into a string.
-#     For example, [1, 2, 3] becomes ["1", "2", "3"].
