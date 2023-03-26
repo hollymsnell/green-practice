@@ -172,67 +172,192 @@
 #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
 #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-numbers = [34, 2, 6, 45, 7]
-new_array = []
-numbers.each do |number|
-  if number < 20
-    new_array << number
-  end
+# numbers = [34, 2, 6, 45, 7]
+# new_array = []
+# numbers.each do |number|
+#   if number < 20
+#     new_array << number
+#   end
+# end
+# p new_array
+
+# #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
+# #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+
+# strings = ["wise", "wealth", "hi", "stop"]
+# w_words = []
+# strings.each do |string|
+#   if string[0] == "w"
+#     w_words << string
+#   end
+# end
+# p w_words
+
+# #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
+# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
+
+# items = [
+#   {name: "chair", price: 100}, 
+#   {name: "pencil", price: 1},
+#   {name: "notebook", price: 12},
+#   {name: "eraser", price: 3}, 
+#   {name: "book", price: 4}
+#   ]
+# pricey = []
+# items.each do |item|
+#   if item[:price] > 5
+#     pricey << item
+#   end
+# end
+# p pricey
+
+
+# #  4. Start with an array of numbers and create a new array with only the even numbers.
+# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+
+# numbers = [4, 7, 8, 5, 435, 6]
+# evens = []
+# numbers.each do |number|
+#   if number % 2 == 0
+#     evens << number
+#   end
+# end
+# p evens
+
+# #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
+# #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
+
+# words = ["fancy", "date", "get", "some"]
+# short_words = []
+# words.each do |word|
+#   if word.length < 4
+#     short_words << word
+#   end
+# end
+# p short_words
+
+# #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
+# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+
+# items = [
+#   {name: "chair", price: 100}, 
+#   {name: "pencil", price: 1},
+#   {name: "notebook", price: 12},
+#   {name: "eraser", price: 3}, 
+#   {name: "book", price: 4}
+#   ]
+# short_names = []
+# items.each do |item|
+#   if item[:name].length < 6
+#     short_names << item
+#   end
+# end
+# p short_names
+
+# #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
+# #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+
+# numbers = [4, 7, 23, 56, 1]
+# singles = []
+# numbers.each do |number|
+#   if number < 10
+#     singles << number
+#   end
+# end
+# p singles
+
+# #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
+# #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
+
+# words = ["beer", "friday", "night", "baby"]
+# no_b_words =[]
+# words.each do |word|
+#   if word[0] != "b"
+#     no_b_words << word
+#   end
+# end
+# p no_b_words
+
+# #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
+# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
+
+# items = [
+#   {name: "chair", price: 100}, 
+#   {name: "pencil", price: 1},
+#   {name: "notebook", price: 12},
+#   {name: "eraser", price: 3}, 
+#   {name: "book", price: 4}
+#   ]
+# cheap = []
+# items.each do |item|
+#   if item[:price] < 10 
+#     cheap << item
+#   end
+# end
+# p cheap
+
+# # 10. Start with an array of numbers and create a new array with only the odd numbers.
+# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+# numbers = [3, 6, 5, 6, 45, 234]
+# odds = []
+# numbers.each do |number|
+#   if number % 2 == 1
+#     odds << number
+#   end
+# end
+# p odds
+
+###.select###
+
+#  1. Start with an array of numbers and create a new array with only the numbers less than 20.
+#     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
+
+numbers = [2, 32, 80, 18, 12, 3]
+less = numbers.select do |number|
+  number < 20
 end
-p new_array
+p less
 
 #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
 #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
-strings = ["wise", "wealth", "hi", "stop"]
-w_words = []
-strings.each do |string|
-  if string[0] == "w"
-    w_words << string
-  end
+strings = ["we", "will", "we", "will", "rock", "you"]
+doubleyous = strings.select do |string|
+  string[0] == "w"
 end
-p w_words
+p doubleyous
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
 items = [
-  {name: "chair", price: 100}, 
-  {name: "pencil", price: 1},
-  {name: "notebook", price: 12},
-  {name: "eraser", price: 3}, 
-  {name: "book", price: 4}
-  ]
-pricey = []
-items.each do |item|
-  if item[:price] > 5
-    pricey << item
+    {name: "chair", price: 100}, 
+    {name: "pencil", price: 1},
+    {name: "notebook", price: 12},
+    {name: "eraser", price: 3}, 
+    {name: "book", price: 4}
+    ]
+  pricey = items.select do |item|
+    item[:price] > 5
   end
-end
-p pricey
-
+  p pricey
 
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-numbers = [4, 7, 8, 5, 435, 6]
-evens = []
-numbers.each do |number|
-  if number % 2 == 0
-    evens << number
-  end
+numbers = [45, 7, 12, 12, 46, 1]
+evens = numbers.select do |number|
+  number % 2 == 0
 end
 p evens
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-words = ["fancy", "date", "get", "some"]
-short_words = []
-words.each do |word|
-  if word.length < 4
-    short_words << word
-  end
+words = ["heaven", "hell", "boy", "girl", "winter", "summer"]
+short_words = words.select do |word|
+  word.length < 4
 end
 p short_words
 
@@ -240,43 +365,34 @@ p short_words
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
 items = [
-  {name: "chair", price: 100}, 
-  {name: "pencil", price: 1},
-  {name: "notebook", price: 12},
-  {name: "eraser", price: 3}, 
-  {name: "book", price: 4}
-  ]
-short_names = []
-items.each do |item|
-  if item[:name].length < 6
-    short_names << item
-  end
+    {name: "chair", price: 100}, 
+    {name: "pencil", price: 1},
+    {name: "notebook", price: 12},
+    {name: "eraser", price: 3}, 
+    {name: "book", price: 4}
+    ]
+short_names = items.select do |item|
+  item[:name].length < 6
 end
 p short_names
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
-numbers = [4, 7, 23, 56, 1]
-singles = []
-numbers.each do |number|
-  if number < 10
-    singles << number
-  end
+numbers = [23, 3, 43, 2, 1, 7]
+small_numbers = numbers.select do |number|
+  number < 10
 end
-p singles
+p small_numbers
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
-words = ["beer", "friday", "night", "baby"]
-no_b_words =[]
-words.each do |word|
-  if word[0] != "b"
-    no_b_words << word
-  end
+names = ["joe", "betty", "winston", "becka", "theo"]
+no_bee = names.select do |name|
+  name[0] != "b"
 end
-p no_b_words
+p no_bee
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
@@ -288,22 +404,17 @@ items = [
   {name: "eraser", price: 3}, 
   {name: "book", price: 4}
   ]
-cheap = []
-items.each do |item|
-  if item[:price] < 10 
-    cheap << item
-  end
+cheap = items.select do |item|
+  item[:price] < 10
 end
 p cheap
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 
-numbers = [3, 6, 5, 6, 45, 234]
-odds = []
-numbers.each do |number|
-  if number % 2 == 1
-    odds << number
-  end
+
+numbers = [23, 24, 65, 12, 1, 2]
+odds = numbers.select do |number|
+  number % 2 == 1
 end
 p odds
