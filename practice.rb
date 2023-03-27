@@ -1,420 +1,218 @@
 #ruby practice.rb ***
 
-###while loops###
 
-#  1. Start with an array of numbers and create a new array with only the numbers less than 20.
-#     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
+###while loop##
+#  1. Start with an array of numbers and compute the sum of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 26.
 
-# numbers = [2, 6, 67, 7, 100]
-# index = 0
-# new_numbers = []
-# while index < numbers.length
-#   if numbers[index] < 20
-#     new_numbers << numbers[index]
-#   end
-# index = index + 1
-# end
-# p new_numbers
+numbers = [4, 56, 2]
+index = 0
+sum = 0
+while index < numbers.length
+  sum = sum + numbers[index]
+  index = index + 1
+end
+p sum
 
+#  2. Start with an array of strings and combine them all into a single string.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
-# #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
-# #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+strings = ["aint", "seen", "nothin", "yet"]
+index = 0
+long_boy = ""
+while index < strings.length
+  long_boy << strings[index]
+  index += 1
+end
+p long_boy
 
-# strings = ["winter", "spring", "summer", "fall"]
-# index = 0
-# w_words = []
-# while index < strings.length
-#   if strings[index][0] == "w"
-#     w_words << strings[index]
-#   end
-#   index = index + 1
-# end
-# p w_words
+#  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
-# #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
+items = [
+  {name: "bed", price: 100}, 
+  {name: "lamp", price: 1}, 
+  {name: "stool", price: 4},
+  {name: "plant", price: 7},
+  {name: "dresser", price: 50}
+]
+index = 0
+sum = 0
+while index < items.length
+  sum = sum + items[index][:price]
+  index += 1
+end
+p sum
 
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ] 
-# index = 0
-# cheap = []
-# while index < items.length
-#   if items[index][:price] < 5
-#     cheap << items[index]
-#   end
-#   index = index + 1
-# end
-# p cheap
+#  4. Start with an array of numbers and compute the the minumum number.
+#     For example, [5, 10, 8, 3, 9] becomes 3.
 
+numbers = [34, 1, 45, 3, 14]
+index = 0
+min_num = numbers[0]
+while index < numbers.length
+if numbers[index] < min_num
+  min_num = numbers[index]
+end
+index += 1
+end
+p min_num
 
-# #  4. Start with an array of numbers and create a new array with only the even numbers.
-# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+#  5. Start with an array of strings and compute the total length of all the strings.
+#     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
-# numbers = [23, 6, 56, 6, 13]
-# index = 0
-# even_numbers = []
-# while index < numbers.length
-#   if numbers[index] % 2 == 0
-#     even_numbers << numbers[index]
-#   end
-#   index += 1
-# end
-# p even_numbers
+strings = ["volleyball", "basketball", "badminton"]
+index = 0
+total_length = 0
+while index < strings.length
+  total_length = total_length + strings[index].length
+  index += 1
+end
+p total_length
 
-# #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
-# #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
+#  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
-# strings = ["the", "love", "of", "a", "cat"]
-# index = 0
-# shorties = []
-# while index < strings.length
-#   if strings[index].length < 4
-#     shorties << strings[index]
-#   end
-#   index += 1
-# end
-# p shorties
+items = [
+  {name: "bed", price: 100}, 
+  {name: "lamp", price: 1}, 
+  {name: "stool", price: 4},
+  {name: "plant", price: 7},
+  {name: "dresser", price: 50}
+]
+index = 0 
+lowest_price = items[0][:price]
+while index < items.length
+  if items[index][:price] < lowest_price
+    lowest_price = items[index][:price]
+  end
+  index += 1
+end
+p lowest_price
 
-# #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+#  7. Start with an array of numbers and compute product of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 1200.
 
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ]
-# index = 0 
-# short_names = []
-# while index < items.length
-#   if items[index][:name].length < 6
-#     short_names << items[index]
-#   end
-#   index += 1
-# end
-# p short_names
+numbers = [12, 6, 22, 1]
+index = 0
+product = 1
+while index < numbers.length
+  product = product * numbers[index]
+  index += 1
+end
+p product
 
+#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
-# #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
-# #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+strings = ["summer", "fall", "winter", "spring"]
+index = 0
+joined = "-"
+while index < strings.length
+  string = strings[index]
+  joined += "#{string}-"
+  index += 1
+end
+p joined
 
-# numbers = [234, 34, 67, 3, 6, 1]
-# index = 0
-# small_numbers = []
-# while index < numbers.length
-#   if numbers[index] < 10
-#     small_numbers << numbers[index]
-#   end
-#   index += 1
-# end
-# p small_numbers
+#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
-# #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
-# #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
+items = [
+  {name: "bed", price: 100}, 
+  {name: "lamp", price: 1}, 
+  {name: "stool", price: 4},
+  {name: "plant", price: 7},
+  {name: "dresser", price: 50}
+]
+shortest_name = items[0]
+index = 0
+while index < items.length
+  if items[index][:name].length < shortest_name[:name].length
+    shortest_name = items[index][:name]
+  end
+  index += 1
+end
+p shortest_name
 
-# strings = ["i", "eat", "big", "breakfast"]
-# index = 0
-# no_b_words = []
-# while index < strings.length
-#   if strings[index][0] != "b"
-#     no_b_words << strings[index]
-#   end
-#   index += 1
-# end
-# p no_b_words
+# 10. Start with an array of numbers and compute the maximum number.
+#     For example, [5, 10, 8, 3] becomes 10.
 
-
-# #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
-
-
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ]
-# index = 0
-# low_price = []
-# while index < items.length
-#   if items[index][:price] < 10
-#     low_price << items[index]
-#   end
-#   index += 1
-# end
-# p low_price
-
-# # 10. Start with an array of numbers and create a new array with only the odd numbers.
-# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+numbers = [5, 234, 66, 12]
+max_num = numbers[0]
+index = 0
+while index < numbers.length
+  if numbers[index] > max_num
+    max_num = numbers[index]
+  end
+  index += 1
+end
+p max_num
 
 
-# numbers = [3, 6, 23, 56, 100]
-# index = 0
-# odd_numbers = []
-# while index < numbers.length
-#   if numbers[index] % 2 == 1
-#     odd_numbers << numbers[index]
-#   end
-#   index += 1
-# end
-# p odd_numbers
 
 
 ###.each###
 
-#  1. Start with an array of numbers and create a new array with only the numbers less than 20.
-#     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
+#  1. Start with an array of numbers and compute the sum of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 26.
 
-# numbers = [34, 2, 6, 45, 7]
-# new_array = []
-# numbers.each do |number|
-#   if number < 20
-#     new_array << number
-#   end
-# end
-# p new_array
+#  2. Start with an array of strings and combine them all into a single string.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
-# #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
-# #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+#  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
-# strings = ["wise", "wealth", "hi", "stop"]
-# w_words = []
-# strings.each do |string|
-#   if string[0] == "w"
-#     w_words << string
-#   end
-# end
-# p w_words
+#  4. Start with an array of numbers and compute the the minumum number.
+#     For example, [5, 10, 8, 3, 9] becomes 3.
 
-# #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
+#  5. Start with an array of strings and compute the total length of all the strings.
+#     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ]
-# pricey = []
-# items.each do |item|
-#   if item[:price] > 5
-#     pricey << item
-#   end
-# end
-# p pricey
+#  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+
+#  7. Start with an array of numbers and compute product of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 1200.
+
+#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+
+# 10. Start with an array of numbers and compute the maximum number.
+#     For example, [5, 10, 8, 3] becomes 10.
 
 
-# #  4. Start with an array of numbers and create a new array with only the even numbers.
-# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+###.reduce ###
 
-# numbers = [4, 7, 8, 5, 435, 6]
-# evens = []
-# numbers.each do |number|
-#   if number % 2 == 0
-#     evens << number
-#   end
-# end
-# p evens
+#  1. Start with an array of numbers and compute the sum of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 26.
 
-# #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
-# #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
+#  2. Start with an array of strings and combine them all into a single string.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
-# words = ["fancy", "date", "get", "some"]
-# short_words = []
-# words.each do |word|
-#   if word.length < 4
-#     short_words << word
-#   end
-# end
-# p short_words
+#  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
-# #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+#  4. Start with an array of numbers and compute the the minumum number.
+#     For example, [5, 10, 8, 3, 9] becomes 3.
 
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ]
-# short_names = []
-# items.each do |item|
-#   if item[:name].length < 6
-#     short_names << item
-#   end
-# end
-# p short_names
+#  5. Start with an array of strings and compute the total length of all the strings.
+#     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
-# #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
-# #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+#  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
-# numbers = [4, 7, 23, 56, 1]
-# singles = []
-# numbers.each do |number|
-#   if number < 10
-#     singles << number
-#   end
-# end
-# p singles
+#  7. Start with an array of numbers and compute product of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 1200.
 
-# #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
-# #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
+#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
-# words = ["beer", "friday", "night", "baby"]
-# no_b_words =[]
-# words.each do |word|
-#   if word[0] != "b"
-#     no_b_words << word
-#   end
-# end
-# p no_b_words
+#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
-# #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
-
-# items = [
-#   {name: "chair", price: 100}, 
-#   {name: "pencil", price: 1},
-#   {name: "notebook", price: 12},
-#   {name: "eraser", price: 3}, 
-#   {name: "book", price: 4}
-#   ]
-# cheap = []
-# items.each do |item|
-#   if item[:price] < 10 
-#     cheap << item
-#   end
-# end
-# p cheap
-
-# # 10. Start with an array of numbers and create a new array with only the odd numbers.
-# #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
-
-# numbers = [3, 6, 5, 6, 45, 234]
-# odds = []
-# numbers.each do |number|
-#   if number % 2 == 1
-#     odds << number
-#   end
-# end
-# p odds
-
-###.select###
-
-#  1. Start with an array of numbers and create a new array with only the numbers less than 20.
-#     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
-
-numbers = [2, 32, 80, 18, 12, 3]
-less = numbers.select do |number|
-  number < 20
-end
-p less
-
-#  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
-#     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
-
-strings = ["we", "will", "we", "will", "rock", "you"]
-doubleyous = strings.select do |string|
-  string[0] == "w"
-end
-p doubleyous
-
-#  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
-
-items = [
-    {name: "chair", price: 100}, 
-    {name: "pencil", price: 1},
-    {name: "notebook", price: 12},
-    {name: "eraser", price: 3}, 
-    {name: "book", price: 4}
-    ]
-  pricey = items.select do |item|
-    item[:price] > 5
-  end
-  p pricey
-
-#  4. Start with an array of numbers and create a new array with only the even numbers.
-#     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
-
-numbers = [45, 7, 12, 12, 46, 1]
-evens = numbers.select do |number|
-  number % 2 == 0
-end
-p evens
-
-#  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
-#     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
-
-words = ["heaven", "hell", "boy", "girl", "winter", "summer"]
-short_words = words.select do |word|
-  word.length < 4
-end
-p short_words
-
-#  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
-
-items = [
-    {name: "chair", price: 100}, 
-    {name: "pencil", price: 1},
-    {name: "notebook", price: 12},
-    {name: "eraser", price: 3}, 
-    {name: "book", price: 4}
-    ]
-short_names = items.select do |item|
-  item[:name].length < 6
-end
-p short_names
-
-#  7. Start with an array of numbers and create a new array with only the numbers less than 10.
-#     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
-
-numbers = [23, 3, 43, 2, 1, 7]
-small_numbers = numbers.select do |number|
-  number < 10
-end
-p small_numbers
-
-#  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
-#     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
-
-names = ["joe", "betty", "winston", "becka", "theo"]
-no_bee = names.select do |name|
-  name[0] != "b"
-end
-p no_bee
-
-#  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
-
-items = [
-  {name: "chair", price: 100}, 
-  {name: "pencil", price: 1},
-  {name: "notebook", price: 12},
-  {name: "eraser", price: 3}, 
-  {name: "book", price: 4}
-  ]
-cheap = items.select do |item|
-  item[:price] < 10
-end
-p cheap
-
-# 10. Start with an array of numbers and create a new array with only the odd numbers.
-#     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
-
-
-numbers = [23, 24, 65, 12, 1, 2]
-odds = numbers.select do |number|
-  number % 2 == 1
-end
-p odds
+# 10. Start with an array of numbers and compute the maximum number.
+#     For example, [5, 10, 8, 3] becomes 10.
