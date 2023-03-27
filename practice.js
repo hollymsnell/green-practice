@@ -153,32 +153,128 @@
 // #  1. Start with an array of numbers and compute the sum of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 26.
 
+var numbers = [3, 34, 66, 7];
+var sum = 0;
+numbers.forEach(function (number) {
+  sum = sum + number;
+});
+console.log(sum);
+
 // #  2. Start with an array of strings and combine them all into a single string.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+
+var sports = ["volleyball", "basketball", "badminton"];
+singleString = "";
+sports.forEach(function (sport) {
+  singleString = singleString + sport;
+});
+console.log(singleString);
 
 // #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
+var items = [
+  { name: "bed", price: 100 },
+  { name: "lamp", price: 1 },
+  { name: "stool", price: 4 },
+  { name: "plant", price: 7 },
+  { name: "dresser", price: 50 },
+];
+var priceSum = 0;
+items.forEach(function (item) {
+  priceSum = priceSum + item.price;
+});
+console.log(priceSum);
+
 // #  4. Start with an array of numbers and compute the the minumum number.
 // #     For example, [5, 10, 8, 3, 9] becomes 3.
+
+var values = [4, 3, 5, 76, 45];
+var minNum = values[0];
+values.forEach(function (value) {
+  if (value < minNum) {
+    minNum = value;
+  }
+});
+console.log(minNum);
 
 // #  5. Start with an array of strings and compute the total length of all the strings.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
+var seasons = ["winter", "spring", "summer", "fall"];
+var total = 0;
+seasons.forEach(function (season) {
+  total = total + season.length;
+});
+console.log(total);
+
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+
+var things = [
+  { name: "bed", price: 100 },
+  { name: "lamp", price: 1 },
+  { name: "stool", price: 4 },
+  { name: "plant", price: 7 },
+  { name: "dresser", price: 50 },
+];
+var lowest = things[0];
+things.forEach(function (thing) {
+  if (thing.price < lowest.price) {
+    lowest = thing;
+  }
+});
+console.log(lowest);
 
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
 
+var digits = [34, 27, 8, 2];
+var product = 1;
+digits.forEach(function (digit) {
+  product = product * digit;
+});
+console.log(product);
+
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+var boys = ["rico", "casey", "james", "heinrich"];
+var together = "";
+boys.forEach(function (boy) {
+  together = together + boy;
+});
+console.log(together);
 
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
+var cosas = [
+  { name: "bed", price: 100 },
+  { name: "lamp", price: 1 },
+  { name: "stool", price: 4 },
+  { name: "plant", price: 7 },
+  { name: "dresser", price: 50 },
+];
+var shortName = cosas[0];
+cosas.forEach(function (cosa) {
+  if (cosa.name.length < shortName.name.length) {
+    shortName = cosa;
+  }
+});
+console.log(shortName);
+
 // # 10. Start with an array of numbers and compute the maximum number.
 // #     For example, [5, 10, 8, 3] becomes 10.
+
+var numbers = [345, 45, 689, 3];
+var maximum = numbers[0];
+numbers.forEach(function (number) {
+  if (number > maximum) {
+    maximum = number;
+  }
+});
+console.log(maximum);
 
 // #  1. Start with an array of numbers and compute the sum of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 26.
