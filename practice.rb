@@ -1,346 +1,58 @@
 #ruby practice.rb ***
 
 
-###while loop##
-#  1. Start with an array of numbers and compute the sum of all the numbers.
-#     For example, [5, 10, 8, 3] becomes 26.
+# 1. Use a variable to store a number, then write a condition that prints 0 if the number is equal to 10, and prints -1 otherwise.
 
-# numbers = [4, 56, 2]
-# index = 0
-# sum = 0
-# while index < numbers.length
-#   sum = sum + numbers[index]
-#   index = index + 1
-# end
-# p sum
-
-# #  2. Start with an array of strings and combine them all into a single string.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
-
-# strings = ["aint", "seen", "nothin", "yet"]
-# index = 0
-# long_boy = ""
-# while index < strings.length
-#   long_boy << strings[index]
-#   index += 1
-# end
-# p long_boy
-
-# #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# index = 0
-# sum = 0
-# while index < items.length
-#   sum = sum + items[index][:price]
-#   index += 1
-# end
-# p sum
-
-# #  4. Start with an array of numbers and compute the the minumum number.
-# #     For example, [5, 10, 8, 3, 9] becomes 3.
-
-# numbers = [34, 1, 45, 3, 14]
-# index = 0
-# min_num = numbers[0]
-# while index < numbers.length
-# if numbers[index] < min_num
-#   min_num = numbers[index]
-# end
-# index += 1
-# end
-# p min_num
-
-# #  5. Start with an array of strings and compute the total length of all the strings.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
-
-# strings = ["volleyball", "basketball", "badminton"]
-# index = 0
-# total_length = 0
-# while index < strings.length
-#   total_length = total_length + strings[index].length
-#   index += 1
-# end
-# p total_length
-
-# #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# index = 0 
-# lowest_price = items[0][:price]
-# while index < items.length
-#   if items[index][:price] < lowest_price
-#     lowest_price = items[index][:price]
-#   end
-#   index += 1
-# end
-# p lowest_price
-
-# #  7. Start with an array of numbers and compute product of all the numbers.
-# #     For example, [5, 10, 8, 3] becomes 1200.
-
-# numbers = [12, 6, 22, 1]
-# index = 0
-# product = 1
-# while index < numbers.length
-#   product = product * numbers[index]
-#   index += 1
-# end
-# p product
-
-# #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
-
-# strings = ["summer", "fall", "winter", "spring"]
-# index = 0
-# joined = "-"
-# while index < strings.length
-#   string = strings[index]
-#   joined += "#{string}-"
-#   index += 1
-# end
-# p joined
-
-# #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# shortest_name = items[0]
-# index = 0
-# while index < items.length
-#   if items[index][:name].length < shortest_name[:name].length
-#     shortest_name = items[index][:name]
-#   end
-#   index += 1
-# end
-# p shortest_name
-
-# # 10. Start with an array of numbers and compute the maximum number.
-# #     For example, [5, 10, 8, 3] becomes 10.
-
-# numbers = [5, 234, 66, 12]
-# max_num = numbers[0]
-# index = 0
-# while index < numbers.length
-#   if numbers[index] > max_num
-#     max_num = numbers[index]
-#   end
-#   index += 1
-# end
-# p max_num
-
-
-
-
-###.each###
-
-#  1. Start with an array of numbers and compute the sum of all the numbers.
-#     For example, [5, 10, 8, 3] becomes 26.
-
-# numbers = [34, 56, 2, 84]
-# sum = 0
-# numbers.each do |number|
-#   sum = sum + number
-# end
-# p sum
-
-# #  2. Start with an array of strings and combine them all into a single string.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
-
-# strings = ["winter", "spring", "summer", "fall"]
-# one_string = ""
-# strings.each do |string|
-#   one_string = one_string + string
-# end
-# p one_string
-
-# #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# sum = 0
-# items.each do |item|
-#   sum = sum + item[:price]
-# end
-# p sum
-
-# #  4. Start with an array of numbers and compute the the minumum number.
-# #     For example, [5, 10, 8, 3, 9] becomes 3.
-
-# numbers = [34, 7, 23, 36, 9]
-# min_num = numbers[0]
-# numbers.each do |number|
-#   if number < min_num
-#     min_num = number
-#   end
-# end
-# p min_num
-
-# #  5. Start with an array of strings and compute the total length of all the strings.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
-
-# sports = ["volleyball", "basketball", "badminton"]
-# length_sum = 0
-# sports.each do |sport|
-#   length_sum = length_sum + sport.length
-# end
-# p length_sum
-
-# #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# lowest_price = items[0]
-# items.each do |item|
-#   if item[:price] < lowest_price[:price]
-#     lowest_price = item
-#   end
-# end
-# p lowest_price
-
-# #  7. Start with an array of numbers and compute product of all the numbers.
-# #     For example, [5, 10, 8, 3] becomes 1200.
-
-# numbers = [2, 5, 12]
-# product = 1
-# numbers.each do |number|
-#   product = product * number
-# end
-# p product
-
-# #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-# #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
-
-# sports =["volleyball", "basketball", "badminton"]
-# single = "-"
-# sports.each do |sport|
-#   single = single + "#{sport}-"
-# end
-# p single
-
-# #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-# #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-
-# items = [
-#   {name: "bed", price: 100}, 
-#   {name: "lamp", price: 1}, 
-#   {name: "stool", price: 4},
-#   {name: "plant", price: 7},
-#   {name: "dresser", price: 50}
-# ]
-# shortest_name = items[0]
-# items.each do |item|
-#   if item[:name].length < shortest_name[:name].length
-#     shortest_name = item
-#   end
-# end
-# p shortest_name
-
-# # 10. Start with an array of numbers and compute the maximum number.
-# #     For example, [5, 10, 8, 3] becomes 10.
-
-# numbers = [6, 7, 8, 2]
-# max_num = numbers[0]
-# numbers.each do |number|
-#   if number > max_num
-#     max_num = number
-#   end
-# end
-# p max_num
-
-###.reduce ###
-
-#  1. Start with an array of numbers and compute the sum of all the numbers.
-#     For example, [5, 10, 8, 3] becomes 26.
-
-numbers = [45, 1, 5, 1]
-sum = numbers.reduce(0) do |sum, number|
-  sum + number
+number = 4
+if number == 10
+  p 0
+else 
+  p -1
 end
-p sum
 
-#  2. Start with an array of strings and combine them all into a single string.
-#     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+# 2. Use a variable to store a number, then write a condition that prints -1 if the number is less than 10, prints 1 if the number is greater than 10, and prints 0 if the number is equal to 10.
 
-sports = ["volleyball", "basketball", "badminton"]
-word = sports.reduce("") do |word, sport|
-  word + sport
+number = 10
+if number < 10
+  p -1
+elsif
+  number > 10
+  p 1
+else
+  p 0
 end
-p word
 
-#  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
+# 3. Use variables to store two numbers, then write a condition that prints 1 if the numbers are both less than 10, and prints 0 otherwise.
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-total_price = items.reduce(0) do |total, item|
-  total + item[:price]
+num1 = 1
+num2 = 23
+if num1 && num2 < 10
+  p 1
+else
+  p 0
 end
-p total_price
 
-#  4. Start with an array of numbers and compute the the minumum number.
-#     For example, [5, 10, 8, 3, 9] becomes 3.
+# 4. Use a variable to store a number, then write a condition that prints 1 if the number is over 9000, and prints -1 otherwise.
 
-numbers = [6, 88, 4, 1]
-min_num = numbers.reduce(numbers[0]) do |min, number|
-  if number < min 
-  number
-  else min
-  end
+number = 234
+if number > 9000
+  p 1
+else p -1
 end
-p min_num
 
-#  5. Start with an array of strings and compute the total length of all the strings.
-#     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+# 5. Use a variable to store a number, then write a condition that prints 9 if the number is less than 10, prints 19 if the number is less than 20, prints 29 if the number is less than 30, and prints -1 otherwise (only one print statement should occur).
 
-sports = ["volleyball", "basketball", "badminton"]
-total_length = sports.reduce(0) do |total, sport|
-  sum + word.length
-end
-p total_length
 
-#  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
-#  7. Start with an array of numbers and compute product of all the numbers.
-#     For example, [5, 10, 8, 3] becomes 1200.
+# 6. Use variables to store two numbers, then write a condition that prints 100 if either number is greater than 10, and prints -100 otherwise.
 
-#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+# 7. Use a variable to store a number, then write a condition that prints 1776 if the number is less than 0, and prints 1979 otherwise.
 
-#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+# 8. Use a variable to store a number, then write a condition that prints 100 if the number equals 100, prints 99 if the number is equal to 99, and prints 0 otherwise.
 
-# 10. Start with an array of numbers and compute the maximum number.
-#     For example, [5, 10, 8, 3] becomes 10.
+# 9. Use variables to store two numbers, then write a condition that prints 1 if the first number is less than zero and the second number is greater than 0, and prints 0 otherwise.
+
+# 10. Use a variable to store a number, then write a condition that prints 5 if the number is greater than 80, prints 4 if the number is greater than 60, prints 3 if the number is greater than 40, prints 2 if the number is greater than 20, and prints 1 otherwise (only one print statement should occur).
+
+
+
