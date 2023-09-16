@@ -1,307 +1,71 @@
 // node practice.js ***
 
-//###while loops###
+// # 1. Use a variable to store a number, then write a condition that prints 0 if the number is equal to 10, and prints -1 otherwise.
 
-// #  1. Start with an array of numbers and compute the sum of all the numbers.
-// #     For example, [5, 10, 8, 3] becomes 26.
+var number = 45;
+if (number === 10) {
+  console.log(0);
+} else {
+  console.log(-1);
+}
 
-// var numbers = [2, 6, 34, 6];
-// var index = 0;
-// var sum = 0;
-// while (index < numbers.length) {
-//   sum = sum + numbers[index];
-//   index += 1;
-// }
-// console.log(sum);
+// # 2. Use a variable to store a number, then write a condition that prints -1 if the number is less than 10, prints 1 if the number is greater than 10, and prints 0 if the number is equal to 10.
 
-// // #  2. Start with an array of strings and combine them all into a single string.
-// // #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+var nummy = 34;
+if (nummy < 10) {
+  console.log(-1);
+} else if (nummy > 10) {
+  console.log(1);
+} else {
+  console.log(0);
+}
 
-// var strings = ["winter", "spring", "summer", "fall"];
-// index = 0;
-// var longBoy = "";
-// while (index < strings.length) {
-//   longBoy = longBoy + strings[index];
-//   index += 1;
-// }
-// console.log(longBoy);
+// # 3. Use variables to store two numbers, then write a condition that prints 1 if the numbers are both less than 10, and prints 0 otherwise.
 
-// // #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-// // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
+var num1 = 3;
+var num2 = 45;
+if (num1 && num2 < 10) {
+  console.log(1);
+} else {
+  console.log(0);
+}
 
-// var furniture = [
-//   { name: "bed", price: 100 },
-//   { name: "lamp", price: 1 },
-//   { name: "stool", price: 4 },
-//   { name: "plant", price: 7 },
-//   { name: "dresser", price: 50 },
-// ];
-// var priceSum = 0;
-// index = 0;
-// while (index < furniture.length) {
-//   priceSum = priceSum + furniture[index].price;
-//   index += 1;
-// }
-// console.log(priceSum);
+// # 4. Use a variable to store a number, then write a condition that prints 1 if the number is over 9000, and prints -1 otherwise.
 
-// // #  4. Start with an array of numbers and compute the the minumum number.
-// // #     For example, [5, 10, 8, 3, 9] becomes 3.
+var numero = 6;
+if (numero < 9000) {
+  console.log(-1);
+} else {
+  console.log(1);
+}
 
-// var values = [4, 23, 134, 5];
-// var minumum = values[0];
-// index = 0;
-// while (index < values.length) {
-//   if (values[index] < minumum) {
-//     minumum = values[index];
-//   }
-//   index += 1;
-// }
-// console.log(minumum);
+// # 5. Use a variable to store a number, then write a condition that prints 9 if the number is less than 10, prints 19 if the number is less than 20, prints 29 if the number is less than 30, and prints -1 otherwise (only one print statement should occur).
 
-// // #  5. Start with an array of strings and compute the total length of all the strings.
-// // #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+var digit = 16;
+if (digit < 10) {
+  console.log(9);
+} else if (digit < 20) {
+  console.log(19);
+} else if (digit < 30) {
+  console.log(29);
+} else {
+  console.log(-1);
+}
 
-// var words = ["happy", "sad", "angry", "glad"];
-// var totalLength = 0;
-// index = 0;
-// while (index < words.length) {
-//   totalLength = totalLength + words[index].length;
-//   index += 1;
-// }
-// console.log(totalLength);
+// # 6. Use variables to store two numbers, then write a condition that prints 100 if either number is greater than 10, and prints -100 otherwise.
 
-// // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-// // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+num1 = 3;
+num2 = 70;
+if (num1 > 10 || num2 > 10) {
+  console.log(100);
+} else {
+  console.log(-100);
+}
 
-// var things = [
-//   { name: "bed", price: 100 },
-//   { name: "lamp", price: 1 },
-//   { name: "stool", price: 4 },
-//   { name: "plant", price: 7 },
-//   { name: "dresser", price: 50 },
-// ];
-// var lowest = things[0];
-// index = 0;
-// while (index < things.length) {
-//   if (things[index].price < lowest.price) {
-//     lowest = things[index];
-//   }
-//   index += 1;
-// }
-// console.log(lowest);
+// # 7. Use a variable to store a number, then write a condition that prints 1776 if the number is less than 0, and prints 1979 otherwise.
 
-// // #  7. Start with an array of numbers and compute product of all the numbers.
-// // #     For example, [5, 10, 8, 3] becomes 1200.
+// # 8. Use a variable to store a number, then write a condition that prints 100 if the number equals 100, prints 99 if the number is equal to 99, and prints 0 otherwise.
 
-// var math = [5, 23, 11, 2];
-// var product = 1;
-// index = 0;
-// while (index < math.length) {
-//   product = product * math[index];
-//   index += 1;
-// }
-// console.log(product);
+// # 9. Use variables to store two numbers, then write a condition that prints 1 if the first number is less than zero and the second number is greater than 0, and prints 0 otherwise.
 
-// // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-// // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
-
-// var seasons = ["winter", "spring", "summer", "fall"];
-// var singleString = "-";
-// index = 0;
-// while (index < seasons.length) {
-//   singleString = singleString + `${seasons[index]}-`;
-//   index += 1;
-// }
-// console.log(singleString);
-
-// // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-// // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-
-// var decor = [
-//   { name: "bed", price: 100 },
-//   { name: "lamp", price: 1 },
-//   { name: "stool", price: 4 },
-//   { name: "plant", price: 7 },
-//   { name: "dresser", price: 50 },
-// ];
-// var shorty = decor[0];
-// index = 0;
-// while (index < decor.length) {
-//   if (decor[index].name.length < shorty.name.length) {
-//     shorty = decor[index];
-//   }
-//   index += 1;
-// }
-// console.log(shorty);
-
-// // # 10. Start with an array of numbers and compute the maximum number.
-// // #     For example, [5, 10, 8, 3] becomes 10.
-
-// var digits = [56, 234, 56778, 12, 134];
-// var maximum = digits[0];
-// index = 0;
-// while (index < digits.length) {
-//   if (digits[index] > maximum) {
-//     maximum = digits[index];
-//   }
-//   index += 1;
-// }
-// console.log(maximum);
-
-// ###.forEach###
-
-// #  1. Start with an array of numbers and compute the sum of all the numbers.
-// #     For example, [5, 10, 8, 3] becomes 26.
-
-var numbers = [3, 34, 66, 7];
-var sum = 0;
-numbers.forEach(function (number) {
-  sum = sum + number;
-});
-console.log(sum);
-
-// #  2. Start with an array of strings and combine them all into a single string.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
-
-var sports = ["volleyball", "basketball", "badminton"];
-singleString = "";
-sports.forEach(function (sport) {
-  singleString = singleString + sport;
-});
-console.log(singleString);
-
-// #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
-
-var items = [
-  { name: "bed", price: 100 },
-  { name: "lamp", price: 1 },
-  { name: "stool", price: 4 },
-  { name: "plant", price: 7 },
-  { name: "dresser", price: 50 },
-];
-var priceSum = 0;
-items.forEach(function (item) {
-  priceSum = priceSum + item.price;
-});
-console.log(priceSum);
-
-// #  4. Start with an array of numbers and compute the the minumum number.
-// #     For example, [5, 10, 8, 3, 9] becomes 3.
-
-var values = [4, 3, 5, 76, 45];
-var minNum = values[0];
-values.forEach(function (value) {
-  if (value < minNum) {
-    minNum = value;
-  }
-});
-console.log(minNum);
-
-// #  5. Start with an array of strings and compute the total length of all the strings.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
-
-var seasons = ["winter", "spring", "summer", "fall"];
-var total = 0;
-seasons.forEach(function (season) {
-  total = total + season.length;
-});
-console.log(total);
-
-// #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
-
-var things = [
-  { name: "bed", price: 100 },
-  { name: "lamp", price: 1 },
-  { name: "stool", price: 4 },
-  { name: "plant", price: 7 },
-  { name: "dresser", price: 50 },
-];
-var lowest = things[0];
-things.forEach(function (thing) {
-  if (thing.price < lowest.price) {
-    lowest = thing;
-  }
-});
-console.log(lowest);
-
-// #  7. Start with an array of numbers and compute product of all the numbers.
-// #     For example, [5, 10, 8, 3] becomes 1200.
-
-var digits = [34, 27, 8, 2];
-var product = 1;
-digits.forEach(function (digit) {
-  product = product * digit;
-});
-console.log(product);
-
-// #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
-
-var boys = ["rico", "casey", "james", "heinrich"];
-var together = "";
-boys.forEach(function (boy) {
-  together = together + boy;
-});
-console.log(together);
-
-// #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-
-var cosas = [
-  { name: "bed", price: 100 },
-  { name: "lamp", price: 1 },
-  { name: "stool", price: 4 },
-  { name: "plant", price: 7 },
-  { name: "dresser", price: 50 },
-];
-var shortName = cosas[0];
-cosas.forEach(function (cosa) {
-  if (cosa.name.length < shortName.name.length) {
-    shortName = cosa;
-  }
-});
-console.log(shortName);
-
-// # 10. Start with an array of numbers and compute the maximum number.
-// #     For example, [5, 10, 8, 3] becomes 10.
-
-var numbers = [345, 45, 689, 3];
-var maximum = numbers[0];
-numbers.forEach(function (number) {
-  if (number > maximum) {
-    maximum = number;
-  }
-});
-console.log(maximum);
-
-// #  1. Start with an array of numbers and compute the sum of all the numbers.
-// #     For example, [5, 10, 8, 3] becomes 26.
-
-// #  2. Start with an array of strings and combine them all into a single string.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
-
-// #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
-
-// #  4. Start with an array of numbers and compute the the minumum number.
-// #     For example, [5, 10, 8, 3, 9] becomes 3.
-
-// #  5. Start with an array of strings and compute the total length of all the strings.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
-
-// #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
-
-// #  7. Start with an array of numbers and compute product of all the numbers.
-// #     For example, [5, 10, 8, 3] becomes 1200.
-
-// #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
-// #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
-
-// #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
-// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-
-// # 10. Start with an array of numbers and compute the maximum number.
-// #     For example, [5, 10, 8, 3] becomes 10.
+// # 10. Use a variable to store a number, then write a condition that prints 5 if the number is greater than 80, prints 4 if the number is greater than 60, prints 3 if the number is greater than 40, prints 2 if the number is greater than 20, and prints 1 otherwise (only one print statement should occur).
