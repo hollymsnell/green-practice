@@ -1,34 +1,63 @@
 // node practice.js ***
 
-// # 1. Write a program that uses variables to store a first and last name, then prints the full name in one line using string concatenation (the + operator).
+// # 1. Write a while loop to print the numbers 1 through 10.
 
-var firstName = "holly";
-var lastName = "snell";
-console.log(firstName + " " + lastName);
-
-// # 2. Write a program that uses variables to store a first and last name, then prints the full name in one line using string interpolation (the #{} operator).
-
-var firstName = "holly";
-var lastName = "snell";
-console.log(`${firstName} ${lastName}`);
-
-// # 3. Write a program that asks the user to input a word. If the word is "marco", print "polo".
-
-var word = window.prompt("Enter a word:");
-if (word === "marco") {
-  console.log("polo");
+var number = 1;
+while (number <= 10) {
+  console.log(number);
+  number = number + 1;
 }
 
-// # 4. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string concatenation (the + operator).
+// # 2. Write a while loop that prints the word "hello" 5 times.
 
-// # 5. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string interpolation (the #{} operator).
+var count = 0;
+while (count < 5) {
+  console.log("hello");
+  count = count + 1;
+}
 
-// # 6. Write a program that asks the user to enter a name. If the name is not "Santa", print "You're not Santa."
+// # 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
 
-// # 7. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator).
+// # 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
 
-// # 8. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string interpolation (the #{} operator).
+var number = 0;
+while (number <= 100) {
+  console.log(number);
+  number = number + 1;
+}
 
-// # 9. Write a program that asks the user to enter a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
+// # 5. Write a while loop that prints the number 9000 ten times.
 
-// # 10. Write a program that uses variables to store the names of three cities, then prints out a sentence using that information with string concatenation (the + operator).
+var count = 0;
+while (count < 10) {
+  console.log(9000);
+  count = count + 1;
+}
+
+// # 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
+
+// # 7. Write a while loop that prints the numbers 50 to 70.
+
+var number = 50;
+while (number <= 70) {
+  console.log(number);
+  number = number + 1;
+}
+
+// # 8. Write a while loop that prints the phrase "Around the world" 144 times.
+
+var count = 0;
+while (count < 144) {
+  console.log("Around the World");
+  count = count + 1;
+}
+
+// # 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
+
+// # 10. Write a while loop that prints the even numbers from 2 to 40.
+
+var number = 2;
+while (number <= 40) {
+  console.log(number);
+  number = number + 2;
+}
