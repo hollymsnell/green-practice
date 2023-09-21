@@ -19,7 +19,7 @@ p capitalize("joy to the world")
 # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
 
 def multiply(number1, number2)
-  return number1 * number2
+  return number1 - number2
 end
 
 p multiply(4, 30)
