@@ -1,71 +1,196 @@
 // node practice.js ***
 
-// # 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
+// #***while loop***
 
-function double(number) {
-  return number * 2;
+// #  1. Start with an array of numbers and create a new array with each number times 3.
+// #     For example, [1, 2, 3] becomes [3, 6, 9].
+
+var numbers = [45, 2, 5];
+var trippled = [];
+var index = 0;
+while (index < numbers.length) {
+  trippled.push(numbers[index] * 3);
+  index = index + 1;
 }
-console.log(double(5));
+console.log(trippled);
 
-// # 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
+// #  2. Start with an array of strings and create a new array with each string upcased.
+// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-function capital(string) {
-  return string.toUpperCase();
+var fruits = ["kiwi", "mango", "orange"];
+var tall = [];
+index = 0;
+while (index < fruits.length) {
+  tall.push(fruits[index].toUpperCase());
+  index = index + 1;
 }
-console.log(capital("get some"));
+console.log(tall);
 
-// # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
+// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
-function subtract(number1, number2) {
-  return number1 - number2;
+var people = [
+  { name: "Jose", age: 10 },
+  { name: "Marie", age: 4 },
+];
+var firstName = [];
+index = 0;
+while (index < people.length) {
+  firstName.push(people[index].name);
+  index++;
 }
-console.log(subtract(34, 12));
+console.log(firstName);
 
-// # 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
+// #  4. Start with an array of numbers and create a new array with each number plus 7.
+// #     For example, [1, 2, 3] becomes [8, 9, 10].
 
-function squared(number) {
-  return number * number;
+var digits = [2, 34, 6];
+var added = [];
+index = 0;
+while (index < digits.length) {
+  added.push(digits[index] + 7);
+  index++;
 }
-console.log(squared(5));
+console.log(added);
 
-// # 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
+// #  5. Start with an array of strings and create a new array with each string's length.
+// #     For example, ["hello", "goodbye"] becomes [5, 7].
 
-function firstLetter(string) {
-  return string[0];
+var seasons = ["fall", "winter"];
+var lengths = [];
+index = 0;
+while (index < seasons.length) {
+  lengths.push(seasons[index].length);
+  index++;
 }
-console.log(firstLetter("happy"));
+console.log(lengths);
 
-// # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
+// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
-function allStrings(string1, string2, string3) {
-  return `${string1} ${string2} ${string3}`;
+var people = [
+  { name: "Jose", age: 10 },
+  { name: "Marie", age: 4 },
+];
+var ages = [];
+index = 0;
+while (index < people.length) {
+  ages.push(people[index].age);
+  index++;
 }
-console.log(allStrings("leave", "me", "alone"));
+console.log(ages);
 
-// # 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+// #  7. Start with an array of numbers and create a new array with each number divided by 2.
+// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
-function numberToString(number) {
-  return number.toString();
+var values = [56, 21, 13, 6];
+var divided = [];
+index = 0;
+while (index < values.length) {
+  divided.push(values[index] / 2.0);
+  index++;
 }
-console.log(numberToString(78));
+console.log(divided);
 
-// # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
+// #  8. Start with an array of strings and create a new array with each string's first letter only.
+// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
-function repeat(string) {
-  return string + string + string + string + string;
+var sports = ["basketball", "hockey", "track"];
+var firstLetter = [];
+index = 0;
+while (index < sports.length) {
+  firstLetter.push(sports[index][0]);
+  index++;
 }
-console.log(repeat("weatherman"));
+console.log(firstLetter);
 
-// # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
+// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
-function average(number1, number2, number3) {
-  return (number1 + number2 + number3) / 3.0;
+var people = [
+  { name: "Jose", age: 10 },
+  { name: "Marie", age: 4 },
+];
+var older = [];
+index = 0;
+while (index < people.length) {
+  older.push(people[index].age * 2);
+  index++;
 }
-console.log(average(5, 8, 13));
+console.log(older);
 
-// # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+// # 10. Start with an array of numbers and create a new array with each number converted into a string.
+// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
 
-function math(number) {
-  return number * 10 + 30;
+var phone = [3, 1, 0, 4, 5, 6, 7];
+var written = [];
+index = 0;
+while (index < phone.length) {
+  written.push(phone[index].toString());
+  index++;
 }
-console.log(math(14));
+console.log(written);
+
+// #***.forEach***
+
+// #  1. Start with an array of numbers and create a new array with each number times 3.
+// #     For example, [1, 2, 3] becomes [3, 6, 9].
+
+// #  2. Start with an array of strings and create a new array with each string upcased.
+// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+// #  4. Start with an array of numbers and create a new array with each number plus 7.
+// #     For example, [1, 2, 3] becomes [8, 9, 10].
+
+// #  5. Start with an array of strings and create a new array with each string's length.
+// #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+
+// #  7. Start with an array of numbers and create a new array with each number divided by 2.
+// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+// #  8. Start with an array of strings and create a new array with each string's first letter only.
+// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+// # 10. Start with an array of numbers and create a new array with each number converted into a string.
+// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+// #***.map***
+
+// #  1. Start with an array of numbers and create a new array with each number times 3.
+// #     For example, [1, 2, 3] becomes [3, 6, 9].
+
+// #  2. Start with an array of strings and create a new array with each string upcased.
+// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+// #  4. Start with an array of numbers and create a new array with each number plus 7.
+// #     For example, [1, 2, 3] becomes [8, 9, 10].
+
+// #  5. Start with an array of strings and create a new array with each string's length.
+// #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+
+// #  7. Start with an array of numbers and create a new array with each number divided by 2.
+// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+// #  8. Start with an array of strings and create a new array with each string's first letter only.
+// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
+// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+// # 10. Start with an array of numbers and create a new array with each number converted into a string.
+// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
