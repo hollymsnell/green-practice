@@ -247,29 +247,98 @@ console.log(string);
 // #  1. Start with an array of numbers and create a new array with each number times 3.
 // #     For example, [1, 2, 3] becomes [3, 6, 9].
 
+var numbers = [5, 10, 15, 2];
+var trippled = numbers.map(function (number) {
+  return number * 3;
+});
+console.log(trippled);
+
 // #  2. Start with an array of strings and create a new array with each string upcased.
 // #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+var red = ["stop sign", "blood", "apple"];
+var bigger = red.map(function (color) {
+  return color.toUpperCase();
+});
+console.log(bigger);
 
 // #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
+var people = [
+  { name: "Sunne", age: 8 },
+  { name: "Holly", age: 7 },
+];
+var names = people.map(function (person) {
+  return person.name;
+});
+console.log(names);
+
 // #  4. Start with an array of numbers and create a new array with each number plus 7.
 // #     For example, [1, 2, 3] becomes [8, 9, 10].
+
+var numbers = [6, 67, 2, 1];
+var added = numbers.map(function (number) {
+  return number + 7;
+});
+console.log(added);
 
 // #  5. Start with an array of strings and create a new array with each string's length.
 // #     For example, ["hello", "goodbye"] becomes [5, 7].
 
+var space = ["moon", "stars", "earth", "jupiter"];
+var spaceLength = space.map(function (space) {
+  return space.length;
+});
+console.log(spaceLength);
+
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+
+var people = [
+  { name: "Jose", age: 10 },
+  { name: "Marie", age: 4 },
+];
+var ages = people.map(function (person) {
+  return person.age;
+});
+console.log(ages);
 
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
+var values = [3, 6, 67, 1, 109];
+var halved = values.map(function (value) {
+  return value / 2.0;
+});
+console.log(halved);
+
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+var oceanThings = ["seastar", "octopus", "coral reef"];
+var firstLetter = oceanThings.map(function (ocean) {
+  return ocean[0];
+});
+console.log(firstLetter);
 
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+var people = [
+  { name: "Jose", age: 10 },
+  { name: "Marie", age: 4 },
+];
+var doubledAge = people.map(function (person) {
+  return person.age * 2;
+});
+console.log(doubledAge);
+
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+var numbers = [34, 12, 111, 6];
+var string = numbers.map(function (number) {
+  return number.toString();
+});
+console.log(string);
