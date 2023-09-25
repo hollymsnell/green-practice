@@ -163,32 +163,134 @@ p odds
 #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
 #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
+numbers = [25, 45, 1, 43, 3]
+less_than = []
+numbers.each do |number|
+  if number < 20
+    less_than << number
+  end
+end
+p less_than
+
 #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
 #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+
+words = ["way", "to", "go", "wayne"]
+w_words = []
+words.each do |word|
+  if word[0] == "w"
+    w_words << word
+  end
+end
+p w_words
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
+items = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1},
+  {name: "book", price: 4}
+]
+high_price = []
+items.each do |item|
+  if item[:price] > 5
+    high_price << item
+  end
+end
+p high_price
+
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+
+numbers = [12, 23, 24, 67, 4]
+evens = []
+numbers.each do |number|
+  if number % 2 == 0
+    evens << number
+  end
+end
+p evens
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
+names = ["bob", "william", "joy", "javier"]
+short = []
+names.each do |name|
+  if name.length < 4
+    short << name
+  end
+end
+p short
+
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+
+items = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1},
+  {name: "book", price: 4}
+]
+short_names = []
+items.each do |item|
+  if item[:name].length < 6
+    short_names << item
+  end
+end
+p short_names
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
+numbers = [6, 7, 123, 53, 1]
+smaller = []
+numbers.each do |number|
+  if number < 10 
+    smaller << number
+  end
+end
+p smaller
+
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
+
+words = ["bad", "babies", "are", "possible"]
+no_bee = []
+words.each do |word|
+  if word[0] != "b"
+    no_bee << word
+  end
+end
+p no_bee
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+items = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1},
+  {name: "book", price: 4}
+]
+cheap = []
+items.each do |item|
+  if item[:price] < 10
+    cheap << item
+  end
+end
+p cheap
+
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+numbers = [23, 56, 67, 2, 1, 0]
+odds = []
+numbers.each do |number|
+  if number % 2 == 1
+    odds << number
+  end
+end
+p odds
 
 #**.select**
 
