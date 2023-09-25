@@ -1,344 +1,219 @@
 // node practice.js ***
 
-// #***while loop***
+//*** while loops **
 
-// #  1. Start with an array of numbers and create a new array with each number times 3.
-// #     For example, [1, 2, 3] becomes [3, 6, 9].
+// #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
+// #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-var numbers = [45, 2, 5];
-var trippled = [];
+var numbers = [23, 1, 6, 18];
+var smaller = [];
 var index = 0;
 while (index < numbers.length) {
-  trippled.push(numbers[index] * 3);
-  index = index + 1;
+  if (numbers[index] < 20) {
+    smaller.push(numbers[index]);
+  }
+  index += 1;
 }
-console.log(trippled);
+console.log(smaller);
 
-// #  2. Start with an array of strings and create a new array with each string upcased.
-// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+// #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
+// #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
-var fruits = ["kiwi", "mango", "orange"];
-var tall = [];
+var words = ["winter", "was", "colder", "before"];
+var wWords = [];
 index = 0;
-while (index < fruits.length) {
-  tall.push(fruits[index].toUpperCase());
-  index = index + 1;
+while (index < words.length) {
+  if (words[index][0] == "w") {
+    wWords.push(words[index]);
+  }
+  index += 1;
 }
-console.log(tall);
+console.log(wWords);
 
-// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+// #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
 ];
-var firstName = [];
+var expensive = [];
 index = 0;
-while (index < people.length) {
-  firstName.push(people[index].name);
-  index++;
+while (index < items.length) {
+  if (items[index].price > 5) {
+    expensive.push(items[index]);
+  }
+  index += 1;
 }
-console.log(firstName);
+console.log(expensive);
 
-// #  4. Start with an array of numbers and create a new array with each number plus 7.
-// #     For example, [1, 2, 3] becomes [8, 9, 10].
+// #  4. Start with an array of numbers and create a new array with only the even numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-var digits = [2, 34, 6];
-var added = [];
+var digits = [2, 4, 57, 99, 100];
+var evens = [];
 index = 0;
 while (index < digits.length) {
-  added.push(digits[index] + 7);
-  index++;
+  if (digits[index] % 2 === 0) {
+    evens.push(digits[index]);
+  }
+  index += 1;
 }
-console.log(added);
+console.log(evens);
 
-// #  5. Start with an array of strings and create a new array with each string's length.
-// #     For example, ["hello", "goodbye"] becomes [5, 7].
+// #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
+// #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-var seasons = ["fall", "winter"];
-var lengths = [];
+var verbs = ["go", "run", "evaporate", "win"];
+var shortVerbs = [];
 index = 0;
-while (index < seasons.length) {
-  lengths.push(seasons[index].length);
-  index++;
+while (index < verbs.length) {
+  if (verbs[index].length < 4) {
+    shortVerbs.push(verbs[index]);
+  }
+  index += 1;
 }
-console.log(lengths);
+console.log(shortVerbs);
 
-// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+// #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
 ];
-var ages = [];
+var shortNames = [];
 index = 0;
-while (index < people.length) {
-  ages.push(people[index].age);
-  index++;
+while (index < items.length) {
+  if (items[index].name.length < 6) {
+    shortNames.push(items[index]);
+  }
+  index += 1;
 }
-console.log(ages);
+console.log(shortNames);
 
-// #  7. Start with an array of numbers and create a new array with each number divided by 2.
-// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+// #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
+// #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
-var values = [56, 21, 13, 6];
-var divided = [];
+var values = [23, 12, 3, 8];
+var lessThanTen = [];
 index = 0;
 while (index < values.length) {
-  divided.push(values[index] / 2.0);
-  index++;
+  if (values[index] < 10) {
+    lessThanTen.push(values[index]);
+  }
+  index += 1;
 }
-console.log(divided);
+console.log(lessThanTen);
 
-// #  8. Start with an array of strings and create a new array with each string's first letter only.
-// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+// #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
+// #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
-var sports = ["basketball", "hockey", "track"];
-var firstLetter = [];
+var nouns = ["boss", "fern", "lamp", "bush"];
+var beeb = [];
 index = 0;
-while (index < sports.length) {
-  firstLetter.push(sports[index][0]);
-  index++;
+while (index < nouns.length) {
+  if (nouns[index][0] === "b") {
+    beeb.push(nouns[index]);
+  }
+  index += 1;
 }
-console.log(firstLetter);
+console.log(beeb);
 
-// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+// #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
 ];
-var older = [];
+var cheaper = [];
 index = 0;
-while (index < people.length) {
-  older.push(people[index].age * 2);
-  index++;
+while (index < items.length) {
+  if (items[index].price < 10) {
+    cheaper.push(items[index]);
+  }
+  index += 1;
 }
-console.log(older);
+console.log(cheaper);
 
-// # 10. Start with an array of numbers and create a new array with each number converted into a string.
-// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+// # 10. Start with an array of numbers and create a new array with only the odd numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 
-var phone = [3, 1, 0, 4, 5, 6, 7];
-var written = [];
+var phone = [4, 8, 2, 5, 4, 5, 9];
+var odds = [];
 index = 0;
 while (index < phone.length) {
-  written.push(phone[index].toString());
-  index++;
+  if (phone[index] % 2 === 1) {
+    odds.push(phone[index]);
+  }
+  index += 1;
 }
-console.log(written);
+console.log(odds);
 
-// #***.forEach***
+//**.forEach**
 
-// #  1. Start with an array of numbers and create a new array with each number times 3.
-// #     For example, [1, 2, 3] becomes [3, 6, 9].
+// #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
+// #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-var numbers = [3, 45, 6, 18];
-var timeThree = [];
-numbers.forEach(function (number) {
-  timeThree.push(number * 3);
-});
-console.log(timeThree);
+// #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
+// #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
-// #  2. Start with an array of strings and create a new array with each string upcased.
-// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+// #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
-var plants = ["bush", "flowers", "trees"];
-var bigGuy = [];
-plants.forEach(function (plant) {
-  bigGuy.push(plant.toUpperCase());
-});
-console.log(bigGuy);
+// #  4. Start with an array of numbers and create a new array with only the even numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+// #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
+// #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
-];
-var names = [];
-people.forEach(function (person) {
-  names.push(person.name);
-});
-console.log(names);
+// #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
-// #  4. Start with an array of numbers and create a new array with each number plus 7.
-// #     For example, [1, 2, 3] becomes [8, 9, 10].
+// #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
+// #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
-var values = [2, 34, 3001, 5];
-var plusSeven = [];
-values.forEach(function (value) {
-  plusSeven.push(value + 7);
-});
-console.log(plusSeven);
+// #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
+// #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
-// #  5. Start with an array of strings and create a new array with each string's length.
-// #     For example, ["hello", "goodbye"] becomes [5, 7].
+// #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
-var states = ["Alabama", "Delaware", "Rhode Island"];
-var stringLength = [];
-states.forEach(function (state) {
-  stringLength.push(state.length);
-});
-console.log(stringLength);
+// # 10. Start with an array of numbers and create a new array with only the odd numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 
-// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
+//**.filter**
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
-];
-var ages = [];
-people.forEach(function (person) {
-  ages.push(person.age);
-});
-console.log(ages);
+// #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
+// #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-// #  7. Start with an array of numbers and create a new array with each number divided by 2.
-// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+// #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
+// #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
-var digits = [45, 6, 2, 7];
-var halved = [];
-digits.forEach(function (digit) {
-  halved.push(digit / 2.0);
-});
-console.log(halved);
+// #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
-// #  8. Start with an array of strings and create a new array with each string's first letter only.
-// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+// #  4. Start with an array of numbers and create a new array with only the even numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-var supplies = ["crayon", "marker", "paper"];
-var firstLetter = [];
-supplies.forEach(function (supply) {
-  firstLetter.push(supply[0]);
-});
-console.log(firstLetter);
+// #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
+// #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+// #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
-];
-var doubledAge = [];
-people.forEach(function (person) {
-  doubledAge.push(person.age * 2);
-});
-console.log(doubledAge);
+// #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
+// #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
-// # 10. Start with an array of numbers and create a new array with each number converted into a string.
-// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+// #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
+// #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
-var numbers = [1, 4, 78, 2];
-var string = [];
-numbers.forEach(function (number) {
-  string.push(number.toString());
-});
-console.log(string);
+// #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
+// #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
-// #***.map***
-
-// #  1. Start with an array of numbers and create a new array with each number times 3.
-// #     For example, [1, 2, 3] becomes [3, 6, 9].
-
-var numbers = [5, 10, 15, 2];
-var trippled = numbers.map(function (number) {
-  return number * 3;
-});
-console.log(trippled);
-
-// #  2. Start with an array of strings and create a new array with each string upcased.
-// #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
-
-var red = ["stop sign", "blood", "apple"];
-var bigger = red.map(function (color) {
-  return color.toUpperCase();
-});
-console.log(bigger);
-
-// #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
-
-var people = [
-  { name: "Sunne", age: 8 },
-  { name: "Holly", age: 7 },
-];
-var names = people.map(function (person) {
-  return person.name;
-});
-console.log(names);
-
-// #  4. Start with an array of numbers and create a new array with each number plus 7.
-// #     For example, [1, 2, 3] becomes [8, 9, 10].
-
-var numbers = [6, 67, 2, 1];
-var added = numbers.map(function (number) {
-  return number + 7;
-});
-console.log(added);
-
-// #  5. Start with an array of strings and create a new array with each string's length.
-// #     For example, ["hello", "goodbye"] becomes [5, 7].
-
-var space = ["moon", "stars", "earth", "jupiter"];
-var spaceLength = space.map(function (space) {
-  return space.length;
-});
-console.log(spaceLength);
-
-// #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
-
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
-];
-var ages = people.map(function (person) {
-  return person.age;
-});
-console.log(ages);
-
-// #  7. Start with an array of numbers and create a new array with each number divided by 2.
-// #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
-
-var values = [3, 6, 67, 1, 109];
-var halved = values.map(function (value) {
-  return value / 2.0;
-});
-console.log(halved);
-
-// #  8. Start with an array of strings and create a new array with each string's first letter only.
-// #     For example, ["hello", "goodbye"] becomes ["h", "g"].
-
-var oceanThings = ["seastar", "octopus", "coral reef"];
-var firstLetter = oceanThings.map(function (ocean) {
-  return ocean[0];
-});
-console.log(firstLetter);
-
-// # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
-// #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
-
-var people = [
-  { name: "Jose", age: 10 },
-  { name: "Marie", age: 4 },
-];
-var doubledAge = people.map(function (person) {
-  return person.age * 2;
-});
-console.log(doubledAge);
-
-// # 10. Start with an array of numbers and create a new array with each number converted into a string.
-// #     For example, [1, 2, 3] becomes ["1", "2", "3"].
-
-var numbers = [34, 12, 111, 6];
-var string = numbers.map(function (number) {
-  return number.toString();
-});
-console.log(string);
+// # 10. Start with an array of numbers and create a new array with only the odd numbers.
+// #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
