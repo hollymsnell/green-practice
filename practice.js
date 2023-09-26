@@ -293,29 +293,101 @@ console.log(odds);
 // #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
 // #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
+var numbers = [23, 4, 7, 23, 2];
+var lessThanTwenty = numbers.filter(function (number) {
+  return number < 20;
+});
+console.log(lessThanTwenty);
+
 // #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
 // #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+
+var strings = ["weekend", "worthy", "should", "always"];
+var bestWords = strings.filter(function (string) {
+  return string[0] === "w";
+});
+console.log(bestWords);
 
 // #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var expensive = items.filter(function (item) {
+  return item.price > 5;
+});
+console.log(expensive);
+
 // #  4. Start with an array of numbers and create a new array with only the even numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+
+var numbers = [34, 3, 12, 13, 1];
+var evens = numbers.filter(function (number) {
+  return number % 2 === 0;
+});
+console.log(evens);
 
 // #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 // #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
+var words = ["have", "a", "plan", "and", "make", "demands"];
+var shortWords = words.filter(function (word) {
+  return word.length < 4;
+});
+console.log(shortWords);
+
 // #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var shortNames = items.filter(function (item) {
+  return item.name.length < 6;
+});
+console.log(shortNames);
 
 // #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 // #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
 
+var numbers = [23, 45, 7, 1, 31];
+var lessThanTen = numbers.filter(function (number) {
+  return number < 10;
+});
+console.log(lessThanTen);
+
 // #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 // #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
+
+var words = ["baked", "goods", "make", "giants"];
+var noGees = words.filter(function (word) {
+  return word[0] != "g";
+});
+console.log(noGees);
 
 // #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+var cheaper = items.filter(function (item) {
+  return item.price < 10;
+});
+console.log(cheaper);
+
 // # 10. Start with an array of numbers and create a new array with only the odd numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+var numbers = [34, 12, 23, 79];
+var odds = numbers.filter(function (number) {
+  return number % 2 === 1;
+});
+console.log(odds);
