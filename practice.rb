@@ -271,29 +271,118 @@ p maximum
 #  1. Start with an array of numbers and compute the sum of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 26.
 
+numbers = [45, 2, 5, 11]
+sum = numbers.reduce(0) do |sum, number|
+  sum + number
+end
+p sum
+
+
 #  2. Start with an array of strings and combine them all into a single string.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+
+words = ["have", "a", "nice", "day"]
+single_string = words.reduce("") do |string, word|
+  string + word
+end
+p single_string
 
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
+supplies = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1}, 
+  {name: "book", price: 4}
+]
+price_sum = supplies.reduce(0) do |sum, supply|
+  sum + supply[:price]
+end
+p price_sum
+
 #  4. Start with an array of numbers and compute the the minumum number.
 #     For example, [5, 10, 8, 3, 9] becomes 3.
+
+numbers = [2, -1, 34, 5]
+minimum = numbers.reduce(numbers[0]) do |min, number|
+  if number < min
+    number
+  else
+    min
+  end
+end
+p minimum
 
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
+sports = ["soccer", "tennis", "track"]
+length_of_strings = sports.reduce(0) do |length, sport|
+  length + sport.length
+end
+p length_of_strings
+
 #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+
+supplies = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1}, 
+  {name: "book", price: 4}
+]
+lowest_price = supplies.reduce(supplies[0]) do |price, supply|
+  if supply[:price] < price[:price]
+    supply
+  else
+    price
+  end
+end
+p lowest_price
 
 #  7. Start with an array of numbers and compute product of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 1200.
 
+numbers = [13, 2, 5]
+product = numbers.reduce(1) do |product, number|
+  product * number
+end
+p product
+
 #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+strings = ["make", "that", "money", "girl"]
+dashed = strings.reduce("-") do |dash, string|
+  dash + "#{string}-"
+end
+p dashed
 
 #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
+supplies = [
+  {name: "chair", price: 100}, 
+  {name: "pencil", price: 1}, 
+  {name: "book", price: 4}
+]
+shortest_name = supplies.reduce(supplies[0]) do |name, supply|
+  if supply[:name].length < name[:name].length
+    supply
+  else
+    name
+  end
+end
+p shortest_name
+
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
+
+numbers = [2, 304, 3, 34, 5]
+maximum = numbers.reduce(numbers[0]) do |max, number|
+  if number > max
+    number
+  else
+    max
+  end
+end
+p maximum
