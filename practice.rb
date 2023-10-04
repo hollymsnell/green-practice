@@ -100,14 +100,94 @@ p total_sum
 #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
 
+numbers1 = [1, 2]
+numbers2 = [6, 7, 8]
+sums = []
+index = 0
+while index < numbers1.length
+  index2 = 0
+  while index2 < numbers2.length
+    sums << numbers1[index] + numbers2[index2]
+    index2 += 1
+  end
+  index += 1
+end
+p sums
+
+
 #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
+
+numbers = [2, 8, 3]
+number_products = []
+index = 0
+while index < numbers.length
+  current_number = numbers[index]
+  index2 = 0
+  while index2 < numbers.length
+    other_number = numbers[index2]
+    number_products << current_number * other_number
+    index2 += 1
+  end
+  index += 1
+end
+p number_products
 
 #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 #     For example, [1, 8, 3, 10] becomes 18.
 
+numbers = [1, 8, 3, 10]
+largest_combo = numbers[0] + numbers[1]
+index = 0
+while index < numbers.length
+  index2 = 0
+  while index2 < numbers.length
+    if index != index2
+      sum = numbers[index] + numbers[index2]
+      if sum > largest_combo
+        largest_combo = sum
+        end
+      end
+      index2 += 1
+    end 
+    index += 1
+  end
+  p largest_combo
+
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
+numbers = [2, 5, 3, 1, 0, 7, 11]
+result = false
+index = 0
+while index < numbers.length
+  current_number = numbers[index]
+  index2 = 0
+  while index2 < numbers.length
+    if index != index2
+      other_number = numbers[index2]
+      if current_number + other_number == 10 && result == false
+        result = [current_number, other_number]
+      end
+    end
+    index2 += 1
+  end
+  index += 1
+end
+p result
+
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+nested_words = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
+combined_word = ""
+index = 0
+while index < nested_words.length
+  index2 = 0
+  while index2 < nested_words[index].length
+    combined_word = combined_word + nested_words[index][index2]
+    index2 += 1
+  end
+  index += 1
+end
+p combined_word
