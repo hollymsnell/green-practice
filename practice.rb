@@ -1,193 +1,83 @@
 #ruby practice.rb ***
 
 
-#  1. Use a nested loop to convert an array of number pairs into a single flattened array.
-#     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
 
-number_pairs = [[1, 3], [8, 9], [2, 16]]
-flattened = []
+#  1. Convert an array of arrays into a hash.
+#     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
+
+pairs = [[1, 3], [8, 9], [2, 16]]
+pairs_hash = {}
 index = 0
-while index < number_pairs.length
-  number_pair = number_pairs[index]
-  index2 = 0
-  while index2 < number_pair.length
-    number = number_pair[index2]
-    flattened << number
-    index2 += 1
-  end
+while index < pairs.length
+  key = pairs[index][0]
+  value = pairs[index][1]
+  pairs_hash[key] = value
   index += 1
 end
-p flattened
+p pairs_hash
 
-#  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
-#     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
+#  2. Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
+#     For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
-letters1 = ["a", "b", "c"]
-letters2 = ["d", "e", "f", "g"]
-combined_letters = []
+items = [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] 
+items_hash = {}
 index = 0
-while index < letters1.length
-  index2 = 0
-  while index2 < letters2.length
-    combined_letters << letters1[index] + letters2[index2]
-    index2 += 1
-  end
+while index < items.length
+  items_hash[items[index][:id]] = items[index]
   index += 1
 end
-p combined_letters
+p items_hash
 
+#  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
+#     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-#  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
-#     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
-
-letters = ["a", "b", "c", "d"]
-all_combined = []
+word = "bookkeeper"
+letter_frequencies = {}
 index = 0
-while index < letters.length
-  index2 = 0
-  while index2 < letters.length
-    if index != index2
-      all_combined << letters[index] + letters[index2]
-    end
-    index2 +=1
+while index < word.length
+  letter = word[index]
+  if letter_frequencies[letter] == nil
+    letter_frequencies[letter] = 0
   end
+  letter_frequencies[letter] += 1
   index +=1
 end
-p all_combined
+p letter_frequencies
 
-#  4. Use a nested loop to find the largest product of any two different numbers within a given array.
-#     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
 
-numbers = [5, -2, 1, -9, -7, 2, 6]
-largest_product = numbers[0] * numbers[1]
-index = 0
-while index < numbers.length
-  current_number = numbers[index]
-  index2 = 0
-  while index2 < numbers.length
-    if index != index2
-      other_number = numbers[index2]
-      product = current_number * other_number
-      if product > largest_product
-        largest_product = product
-      end
-    end
-    index2 += 1
-  end
-  index += 1
+#  4. Convert a hash into an array of arrays.
+#     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
+
+items = {"chair" => 100, "book" => 14}
+item_pairs = []
+items.each do |name, price|
+  item_pairs << [name, price]
 end
-p largest_product
+p item_pairs
 
-#  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
-#     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
-numbers = [[1, 3], [8, 9], [2, 16]]
-total_sum = 0
-index = 0
-while index < numbers.length
-  number = numbers[index]
-  index2 = 0
-  while index2 < number.length
-    num = number[index2]
-    total_sum = total_sum + num
-    index2 += 1
-  end
-  index += 1
+#  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
+#     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
+
+people = {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}}
+people_array = []
+people.each do |id, person|
+  person[:id] = id
+  people_array << person
 end
-p total_sum
+p people_array
 
+#  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
+#     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
-#  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
-#     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+#  7. Convert a hash into a flat array containing all the hash’s keys and values.
+#     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
-numbers1 = [1, 2]
-numbers2 = [6, 7, 8]
-sums = []
-index = 0
-while index < numbers1.length
-  index2 = 0
-  while index2 < numbers2.length
-    sums << numbers1[index] + numbers2[index2]
-    index2 += 1
-  end
-  index += 1
-end
-p sums
+#  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
+#     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
 
+#  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
+#     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
 
-#  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
-#     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
-
-numbers = [2, 8, 3]
-number_products = []
-index = 0
-while index < numbers.length
-  current_number = numbers[index]
-  index2 = 0
-  while index2 < numbers.length
-    other_number = numbers[index2]
-    number_products << current_number * other_number
-    index2 += 1
-  end
-  index += 1
-end
-p number_products
-
-#  8. Use a nested loop to find the largest sum of any two different numbers within an array.
-#     For example, [1, 8, 3, 10] becomes 18.
-
-numbers = [1, 8, 3, 10]
-largest_combo = numbers[0] + numbers[1]
-index = 0
-while index < numbers.length
-  index2 = 0
-  while index2 < numbers.length
-    if index != index2
-      sum = numbers[index] + numbers[index2]
-      if sum > largest_combo
-        largest_combo = sum
-        end
-      end
-      index2 += 1
-    end 
-    index += 1
-  end
-  p largest_combo
-
-#  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
-#     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
-
-numbers = [2, 5, 3, 1, 0, 7, 11]
-result = false
-index = 0
-while index < numbers.length
-  current_number = numbers[index]
-  index2 = 0
-  while index2 < numbers.length
-    if index != index2
-      other_number = numbers[index2]
-      if current_number + other_number == 10 && result == false
-        result = [current_number, other_number]
-      end
-    end
-    index2 += 1
-  end
-  index += 1
-end
-p result
-
-# 10. Use a nested loop to convert an array of string arrays into a single string.
-#     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
-
-nested_words = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
-combined_word = ""
-index = 0
-while index < nested_words.length
-  index2 = 0
-  while index2 < nested_words[index].length
-    combined_word = combined_word + nested_words[index][index2]
-    index2 += 1
-  end
-  index += 1
-end
-p combined_word
+# 10. Given a hash, create a new hash that has the keys and values switched.
+#     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
