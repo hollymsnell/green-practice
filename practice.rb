@@ -1,56 +1,47 @@
 #ruby practice.rb ***
 
 
-# 1. Write a program that uses variables to store a first and last name, then prints the full name in one line using string concatenation (the + operator).
+# 1. Write a program that asks the user to enter a word, then prints that word with all capital letters.
 
-first_name = "Holly"
-last_name = "Berry"
-p "My name is " + first_name + " " + last_name + ", nice to meet you." 
+p "Enter a word"
+word = gets.chomp 
+p word.upcase
 
-# 2. Write a program that uses variables to store a first and last name, then prints the full name in one line using string interpolation (the #{} operator).
+# 2. Write a program that asks the user to enter a number, then prints "That's a big number" if the number is greater than 100.
 
-first = "Joe"
-last = "Richards"
-p "His name is #{first} #{last} and he's trouble."
+# 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
 
-# 3. Write a program that asks the user to input a word. If the word is "marco", print "polo".
+p "Enter two numbers"
+number1 = gets.chomp
+number2 = gets.chomp
+p number1.to_i + number2.to_i
 
-puts "Enter a word"
-word = gets.chomp
-if word == "marco"
-  p "#{word} polo"
+# 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
+
+# 5. Write a program that asks the user to enter a number, then prints the number times 10.
+
+# 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
+
+# 7. Write a program that asks the user to enter a word, then prints the number of letters in the word.
+
+# 8. Write a program that asks the user to enter a number, then prints "That's a negative number" if the number is less than 0.
+
+p "Enter a number"
+number = gets.chomp
+if number.to_i < 0
+  p "that's a negative number"
 else
-  p "thanks for the word" 
+  p "thanks babycakes"
 end
 
-# 4. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string concatenation (the + operator).
+# 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
 
-color1 = "red"
-color2 = "green"
-color3 = "blue"
-p "Common Christmas colors are " + color1 + ", " + color2 + ", " + "and sometimes " + color3 + "."
+# 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
 
-# 5. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string interpolation (the #{} operator).
-
-color1 = "red"
-color2 = "green"
-color3 = "blue"
-p "Common Christmas colors are #{color1}, #{color2}, and sometimes #{color3}."
-
-# 6. Write a program that asks the user to enter a name. If the name is not "Santa", print "You're not Santa."
-
-# 7. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator).
-
-# 8. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string interpolation (the #{} operator).
-
-# 9. Write a program that asks the user to enter a password. If the password is "Joshua", the program responds "Shall we play a game?". For any other password, the program responds "Access denied"
-
-puts "Enter your password"
-password = gets.chomp
-if password == "Joshua"
-  p "Shall we play a game?"
-else 
-  p "Access Denied"
+p "enter a word"
+word = gets.chomp
+if word.length > 5
+  p "That's a long word"
+else
+  p "thats smol"
 end
-
-# 10. Write a program that uses variables to store the names of three cities, then prints out a sentence using that information with string concatenation (the + operator).
