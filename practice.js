@@ -1,47 +1,40 @@
 // node practice.js ***
 
-// # 1. Write a while loop to print the numbers 1 through 10.
+// # 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
 
-var number = 1;
-while (number <= 10) {
-  console.log(number);
-  number += 1;
+var array = ["boy", "girl", "chica"];
+array.push("chico");
+console.log(array);
+
+// # 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
+
+var letters = ["e", "y", "e", "s"];
+letters[1] = "r";
+console.log(letters);
+
+// # 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
+
+var numbers = [6, 7, 34, 100, 4];
+var index = 0;
+while (index < numbers.length) {
+  console.log(numbers[index]);
+  index++;
 }
 
-// # 2. Write a while loop that prints the word "hello" 5 times.
+// # 4. Create an array to store 1 number. Then add three more numbers to the array and print the array on one line.
 
-var word = "hello";
-var count = 1;
-while (count <= 5) {
-  console.log(word);
-  count += 1;
-}
+// # 5. Create an array to store 3 strings with lower case letters. Then change the third string to have all capital letters and print the array on one line.
 
-// # 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
+var strings = ["don't", "get", "mad"];
+strings[2] = strings[2].toUpperCase();
+console.log(strings);
 
-// # 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
+// # 6. Create an array to store 3 names. Then print out each name on separate lines with a while loop.
 
-var number = 0;
-while (number <= 100) {
-  console.log(number);
-  number += 5;
-}
+// # 7. Create an array to store 2 strings. Then add one string to the array and print the array on one line.
 
-// # 5. Write a while loop that prints the number 9000 ten times.
+// # 8. Create an array to store 5 numbers. Then change the first number to 10 times its original value and print the array on one line.
 
-var number = 9000;
-var count = 1;
-while (count <= 10) {
-  console.log(number);
-  count += 1;
-}
+// # 9. Create an array to store 2 numbers. Then print out each number on separate lines with a while loop.
 
-// # 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
-
-// # 7. Write a while loop that prints the numbers 50 to 70.
-
-// # 8. Write a while loop that prints the phrase "Around the world" 144 times.
-
-// # 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
-
-// # 10. Write a while loop that prints the even numbers from 2 to 40.
+// # 10. Create an array to store names of 3 different countries. Then add one more country and print the array one line.
