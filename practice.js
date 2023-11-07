@@ -1,49 +1,71 @@
 // node practice.js ***
 
-// # 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
+// # 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
 
-var person = { firstName: "Holly", lastName: "Snell", email: "email@email.com" };
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.email);
+function getDouble(number) {
+  return number * 2;
+}
+console.log(getDouble(23));
 
-// # 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
+// # 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
 
-var people = [
-  { firstName: "Joy", lastName: "Williams" },
-  { firstName: "Bob", lastName: "The Builder" },
-  { firstName: "Jane", lastName: "Doe" },
-];
-console.log(people[0].firstName);
-console.log(people[0].lastName);
+function capitalize(string) {
+  return string.toUpperCase();
+}
+console.log(capitalize("winter"));
 
-// # 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
+// # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
 
-var menu = { pie: 5, cremepuff: 6, fondue: 19 };
-menu["cake"] = 7;
-console.log(menu);
+function subtract(number1, number2) {
+  return number1 - number2;
+}
+console.log(subtract(3, 1));
 
-// # 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
+// # 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
 
-// # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
+function squared(number) {
+  return number * number;
+}
+console.log(squared(12));
 
-var books = [
-  { title: "book1", author: "author1" },
-  { title: "book2", author: "author2" },
-  { title: "book3", author: "author3" },
-];
-console.log(books[2].author);
+// # 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
 
-// # 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
+function firstLetter(string) {
+  return string[0];
+}
+console.log(firstLetter("vulture"));
 
-var capitals = { denver: "colorado", trenton: "new jersey", pierre: "south dakota" };
-capitals["concord"] = "new hampshire";
-console.log(capitals);
+// # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
 
-// # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
+function combine(string1, string2, string3) {
+  return `${string1} ${string2} ${string3}`;
+}
+console.log(combine("joy", "sunshine", "happy"));
 
-// # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
+// # 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
 
-// # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
+function toAString(number) {
+  return number.toString();
+}
+console.log(toAString(56));
 
-// # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+// # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
+
+function repeat(string) {
+  return string + string + string + string + string;
+}
+console.log(repeat("yolo"));
+
+// # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
+
+function average(number1, number2, number3) {
+  return (number1 + number2 + number3) / 3;
+}
+console.log(average(7, 4, 3));
+
+// # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+
+function addThirty(number) {
+  return number + 30;
+}
+console.log(addThirty(5));
