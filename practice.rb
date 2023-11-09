@@ -138,26 +138,72 @@ while index < numbers.length
 end
 p strings
 
+#.each
+
 #  1. Start with an array of numbers and create a new array with each number times 3.
 #     For example, [1, 2, 3] becomes [3, 6, 9].
+
+numbers = [24, 45, 1]
+trippled = []
+numbers.each do |number|
+  trippled << number * 3
+end
+p trippled
 
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
+strings = ["have", "you", "been", "here"]
+capitalized = []
+strings.each do |string|
+  capitalized << string.upcase
+end
+p capitalized
+
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+people = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
+names = []
+people.each do |person|
+  names << person[:name]
+end
+p names
 
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
+numbers = [6, 45, 1, 8]
+added_seven = []
+numbers.each do |number|
+  added_seven << number + 7
+end
+p added_seven
+
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+strings = ["aquarius", "leo", "scorpio"]
+string_lengths = []
+strings.each do |string|
+  string_lengths << string.length
+end
+p string_lengths
 
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+people = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
+ages = []
+people.each do |person|
+  ages << person[:age]
+end
+p ages
+
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+
 
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
